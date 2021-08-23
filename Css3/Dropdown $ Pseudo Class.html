@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Class</title>
+    <style>
+        .A{
+            background-color: rgb(233, 196, 208);
+            /* width: 30px; */
+            height: 100px;
+         }
+        a:link{ color: red;}
+        a:visited{ color: blue;}
+        a:hover{ color: green;}
+        a:active{ color: mediumaquamarine;}
+
+         .B{
+             background-color: rgb(233, 196, 208);;
+         }
+        div:hover p{
+            background-color: navajowhite;
+            border: 2px solid brown;
+        }
+        /* Concept: write all properties with display none and then use dislay-block with hover tag */
+       .dropdown{
+           position: relative;
+           margin-bottom: 90px;
+           display: inline-block;
+       } 
+       .D-content{
+           display: none;
+           position: absolute;
+           background-color: peru;
+           min-width: 160px;
+           box-shadow: 0px 8px 16px 0px brown;
+           padding: 12px 16px;
+           z-index: 1;
+       }
+       .dropdown:hover .D-content{
+           display: block;
+       }
+            .C{
+                position: relative;
+               display: inline-block;
+            }
+           .Cbtn{
+               background-color: rgb(61, 177, 206);
+               padding: 15px;
+               font-size: 20px;
+               cursor: pointer;
+           }  
+           .C-content{
+               background-color:lightgreen;
+              color:white;
+              min-width: 160px;
+              box-shadow: 0px 8px 16px 0px rgb(206, 171, 171);
+              position: absolute;
+              display: none;
+              z-index: 1;
+              left: 0px; /* use here right or another value to see the difference*/
+           }
+           .C-content a{
+               color: rgb(97, 71, 6);
+               padding: 12px 16px;
+               text-decoration: none;
+               display: block;
+           }
+           .C-content a:hover{ background-color: slateblue;}
+           .C:hover .C-content{display: block; }
+           .C:hover .C{background-color: #c9e1f1; }
+    </style>
+</head>
+<body>
+    <div class="A">
+        <h4>Anchor Pseudo Class</h4>
+  <a href="https://www.wikipedia.com">Wikipedia</a>
+</div>
+    <div class="B">
+        <h4>Pseudo Class</h4>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores recusandae ea aperiam dolorem, consectetur adipisicing elit. Dolores recusandae ea aperiam dolorem consectetur adipisicing elit. Dolores recusandae ea aperiam dolorem consectetur adipisicing elit. Dolores recusandae ea aperiam dolorem consectetur adipisicing elit. Dolores recusandae ea aperiam dolorem voluptate fugit modi atque velit ut, accusamus alias nam odio, eos inventore unde commodi nostrum. Aliquam, dolores.</p>
+    </div>
+    <h1>Dropdown</h1>
+    <div class="dropdown">
+        <span>Mouse over me</span>
+        <div class="D-content">
+            <p>Hello World</p>
+        </div>
+    </div>
+    <div class="C">
+  <button class="Cbtn">Dropdown</button>
+  <div class="C-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+</body>
+</html>

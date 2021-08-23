@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Selectors</title>
+</head>
+<!-- There are 3 main selectors -->
+<!-- 1:Element, 2: ID , 3: cass selector -->
+<body>
+    <!-- <div>   <if i uncomment this div then color of whole di will become pink> -->
+        <h1>CSS selectors</h1> 
+        <!-- Element Selector -->
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <p>Paragraph 4</p>
+        <p>Paragraph 5</p>
+        <style>
+            p{
+                background-color:rgb(139, 190, 139);
+            }
+         h1{
+             background-color:aqua;
+             text-decoration: underline;
+         } 
+        </style>
+    </div> <hr>
+    <!-- ID selector -->
+    <!-- It is use if we want to choose a particular element or styling -->
+    <div>
+        <p id="p1">Paragraph 1</p>
+        <p id="p2">Paragraph 2</p>
+        <p id="p3">Paragraph 3</p>
+        <style>
+            #p1{
+                background-color: lime;
+            }
+            #p2{
+                background-color: goldenrod;
+            }
+        </style>
+    </div> <hr>
+    <!-- Class selector -->
+    <!-- All elements having same style are included as 1 class -->
+    <div>
+        <p class="orange-text">Paragraph 1</p>
+        <p class="orange-text">Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <p class="orange-text">Paragraph 4</p>
+        <p>Paragraph 5</p>
+        <style>
+            .orange-text{
+color: magenta;
+font-size: x-large;
+            }
+        </style>
+    <!-- </div> -->
+    <!-- Id and class can use at ones -->
+    <!-- /* # indicates ID and dot indicate class(Div) */ -->
+    <!-- 1 element can have more than one classes as well as different elements can have same 1 class -->
+    <!-- 1 element can belong to multiple classes similarly More than 1 element can belong to a single class but every element must have unique -->
+    <!-- div# tag -->
+    <div id="First"> First</div>
+    <!-- or only type #First,secnd etc -->
+    <div id="Second"> Second</div>
+    <!-- section.red + enter -->
+    <section class="red">red</section>
+    <!-- NOTE: more than 1 clases can be assign by using dot "." -->
+    <!-- section.red.bg-blue + enter -->
+    <section class="red bg-blue">red bg-blue</section>
+    <!-- 2 -->
+    <!--This way is not recommended to use bcz it complicates hevy projects. it is part of html and we use css for styling. it wasintroduce by developers before css -->
+    <div id="section A" style="background-color: blueviolet;">section A</div>
+<!-- 3:"style sheet" use to link external sheet -->
+<link rel="stylesheet" href="samia.css">
+<div>
+    <br>
+    <h4>CSS selectors</h4> 
+    <!-- Element Selector -->
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p id="p3">Paragraph 3</p>
+    <p>Paragraph 4</p>
+    <p>Paragraph 5</p>
+    <style>
+        p{
+            background-color:rgb(139, 190, 139);
+        }
+        #p3{
+            background-color: lime;
+        }
+    </style>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem velit labore ab cupiditate voluptatibus quidem porro id doloribus, officiis atque officia odio perferendis qui vero, recusandae consequatur aut consequuntur saepe, maxime voluptas. Iste, fugit!</p>
+    <style>
+        h4{
+            color:indigo;
+        }
+        div{
+            background-color: pink;
+        }
+    </style>
+</div>
+      <!-- Id selector -->
+    <style>
+        h4{
+background-color: goldenrod;
+        }
+    </style>
+    <span class="blue">first tag</span>
+    <span class="blue">second tag</span>
+    <span class="blue">third tag</span>
+    <!-- if we want to apply same rules on diff area just write that name with comma e.g below h3  -->
+    <style>
+        .blue,h3{
+            background-color: yellow;
+            color: brown;
+            /* Applying border */
+            border: 2px solid black;
+        }
+        /* this is use to set margin */
+         /* *{
+        margin:0;
+        padding:0;
+    } */
+    </style>
+</body>
+</html>

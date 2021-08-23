@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transforms</title>
+    <style>
+        .A{
+            background: skyblue;
+            border: 2px solid black;
+            margin: 30px auto;
+            padding: 5px;
+            width: 120px;
+            height: 120px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            transition: all 1s ease-in-out;  
+        }
+         /* 2D transformation methods: translate,rotate, scale X, scale Y, scale,skew X,skew Y, skew,matrix  */
+        #A1:hover{transform: rotate(45deg);}
+        #A2:hover{transform: rotate(90deg);}
+        #A3:hover{transform: rotate(180deg);}
+        #A4:hover{transform: rotate(360deg);}
+        #A5:hover{transform: rotate(360deg); transition: all 0.5s ease-in;}
+        #A6:hover{transform: skew(40deg);}   /*or can give 2 no.s to give a diff look*/
+        #A7:hover{transform: scale(3);}      /*the no is multiplied with width and height,,,so give a large no to zoom in and a small no to zoom out*/
+        #A8:hover{transform: scale(0.5);}
+        #A9:hover{transform: translate(200px);}   /*translate X is defualt*/
+        #A10:hover{transform: translatey(200px);}
+        #A11:hover{transform: translate(150px, 150px);} 
+        #A12:hover{transform-origin:0% 100%;}
+        /* matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() */
+        #A13:hover{transform: matrix(2, -0.5, 0, 1,0,0 );}
+        #cover{
+            background: midnightblue;
+            border: 5px solid goldenrod;
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+            float: left;
+        }
+        .C{
+            background: yellowgreen;
+            width: 200px;
+            height: 200px;
+        }
+        /* 3D Transform method: rotate X, rotate Y, rotate Z */
+        #content1{transform: perspective(300px) rotate3d(50,0,0, 30deg);}
+        #content2{transform: perspective(300px) rotate3d(0,50,0, 30deg);}
+        #content3{transform: perspective(300px) rotate3d(0,0,50, 30deg);}
+        #content4{transform: perspective(300px) rotate3d(20,50,80, 60deg);}
+        #content5{transform: perspective(300px) rotate3d(0,50,0, 30deg);}
+        /* translate */
+        #content6{transform: perspective(300px) translate3d(50px, 0px, 0px);}
+        #content7{transform: perspective(300px) translate3d(0px,0px,-150px);}
+        #content8{transform: perspective(300px) translate3d(50px,50px,50px);}
+        #content9{transform: perspective(300px) rotate3d(0,50,0, 30deg);}
+        .T{
+            background: sandybrown;
+            border: 2px solid brown;
+            font-size: larger;
+            width: 150px;
+            height: 150px;
+            margin: 30px;
+        }
+        /* Chnage of smooth animation is called transition */
+        #T1:hover{width: 300px;}
+        #T2:hover{
+            transition-property: width;
+            width: 300px;
+            transition-duration: 1s;}
+        #T3:hover{
+            transition-property: width;
+            width: 300px;
+            transition-duration: 1s;
+            transition-delay: 900ms; /*it starts hover process after a  few moments due to his delay property*/
+           }    
+           /* Shortcut/ transition: property, duration, timing-function, delay */
+        #T4:hover{
+            transition: background-color 2s ease-in-out .5s;
+            background: white;
+        }
+        #T5:hover{
+            transition: all 1s ease-in-out .3s;
+            background: rgb(224, 41, 41);
+            border: 6px dashed yellow;
+            border-radius: 5 px;
+            height: 400px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>2D Transforms</h1>
+    <div class="A" id="A1">A1</div>
+    <div class="A" id="A2">A2</div>
+    <div class="A" id="A3">A3</div>
+    <div class="A" id="A4">A4</div>
+    <div class="A" id="A5">A5</div>
+    <div class="A" id="A6">A6</div>
+    <div class="A" id="A7">A7</div>
+    <div class="A" id="A8">A8</div>
+    <div class="A" id="A9">A9</div>
+    <div class="A" id="A10">A10</div>
+    <div class="A" id="A11">A11</div>
+    <div class="A" id="A12">A12</div>
+    <div class="A" id="A13">A13</div>
+    <h1>3D Transforms</h1>
+    <div id="cover">
+        <div class="C" id="content1"></div>
+    </div>
+    <div id="cover">
+        <div class="C" id="content2"></div>
+    </div> 
+    <div id="cover">
+        <div class="C" id="content3"></div>
+    </div>
+    <div id="cover">
+        <div class="C" id="content4"></div>
+    </div>
+    <div id="cover">
+        <div class="C" id="content5"></div>
+    </div>
+    <div id="cover">
+        <div class="C" id="content6"></div>
+    </div>
+    <div id="cover">
+        <div class="C" id="content7"></div>
+    </div>
+    <div id="cover">
+        <div class="C" id="content8"></div>
+    </div>
+    <hr>
+    <h1>Transition</h1>
+    <div id="Transition">
+        <div class="T" id="T1">Simple( withou transition, it is rapid)</div>
+        <div class="T" id="T2">With transition( Width)</div>
+        <div class="T" id="T3">Delay</div>
+        <div class="T" id="T4">Multiple properties</div>
+        <div class="T" id="T5">Multiple properties</div>
+    </div>
+</body>
+</html>

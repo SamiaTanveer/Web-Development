@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query </title>
+    <!-- It is just like "if-condition" -->
+    <style>
+    .B{
+        background-color: seagreen;
+        color: white;
+        font-size: 72px;
+        text-align: center;
+        display: none;
+    }
+    /* To see the purpose and difference watch the responsive-ness */
+    @media(max-width:1500px) and (min-width:400px){
+        #B1{display: block;}
+    }
+    @media(max-width:1000px){
+        #B2{display: block; background: cyan;}
+    }
+    @media(max-width:700px) and (min-width:300px){
+        #B3{display: block; background: blueviolet;}
+    }
+    @media(max-width:500px) and (min-width:300px){
+        #B4{display: block; background: rgb(79, 248, 64);}
+    }
+
+    /* Another style */
+    /* @media(min-width:10px) and (max-width:500px){
+        #B1{display: block;}
+    }
+    @media(min-width:500px) and (max-width:900px){
+        #B2{display: block; background: cyan; color: black;}
+    }
+    @media(min-width:900px) and (max-width:1300px){
+        #B3{display: block; background: blueviolet;}
+    }
+    @media(min-width:1300px) and (max-width:1800px){
+        #B4{display: block; background: rgb(79, 248, 64); color: maroon;}
+    } */
+    </style>
+</head>
+<body>
+    <div class="B" id="B1">My name is Samia</div>
+    <div class="B" id="B2">My name is Zoha</div>
+    <div class="B" id="B3">My name is Zuha</div>
+    <div class="B" id="B4">My name is Mishal</div>
+</body>
+</html>

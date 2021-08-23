@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Styling & Cursors</title>
+    <!-- Cursor, Out -->
+    <style>
+         .p{
+            background-color: lightgreen;
+            border: 2px solid brown;
+            width: 666px;
+            padding: 20px;
+            margin: 30px auto;
+        }
+        a{
+            text-decoration: none; /*here is use to remove underline */
+        }
+        a:hover{background-color: aqua;
+            color: black;
+        }
+        .btn{
+            background-color: crimson;
+            color: white;
+            padding: 6px;
+            margin: 34px auto;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none; /* to make both same*/
+        }
+        h1{
+            border: 2px solid red;
+            cursor: not-allowed;
+        }
+        /* Types of colors and outline */
+        #colors{
+            border: 5px solid rgb(102, 51, 153);
+            outline-style: dashed;
+            outline-color: #e07888;
+            outline-width: 9px;
+        }
+        /* Types of colours */
+        #p1{
+         color: blue; /*color by name*/
+        }
+        #p2{
+            color: rgb(199, 32, 32);  /* Color by rgb value*/
+        }
+        #p3{
+            color: #ff566f;  /*Color by hex value*/
+        }
+       
+    </style>
+</head>
+<body>
+<!-- works with block and inline block elements not with inline -->
+<div class="p" id="p1">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus porro fugiat ullam veritatis accusamus, consequuntur explicabo expedita voluptatum, molestiae, quis laboriosam voluptatibus aspernatur non ad atque sit saepe facilis error voluptatem modi quidem sint aperiam obcaecati. Quos delectus autem ipsum!</p>
+<a href="" class="btn">Click here</a>
+<button class="btn">Read morer</button>  
+</div>
+<h1>Cursor</h1>
+<!-- If we want to ignore the priority/order then write " !important " at the end of line -->
+<div id="colors">
+    <h2>Types of colors</h2>
+<h4>Para no 1</h4>
+<p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, ut.</p>
+<h4>Para no 2</h4>
+<p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, assumenda!</p>
+<h4>Para no 3</h4>
+<p id="p3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, numquam?</p>
+</div>
+<hr>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        /* Css position: static(default),  relative, absolute,fixed, sticky */
+        .box{
+            background-color: rgb(213, 228, 243);
+            border: 2px solid rgb(60, 55, 139);
+            font-size: large;
+            width: 150px;
+            height: 150px;
+            margin: 15px;
+            margin-bottom: 50px;
+            display: inline-block;
+        }
+        #b1{
+            position: static;
+        }
+        #b6{ /*relative: means relative to its normal position*/
+            position: relative;
+            top: 20px;
+            right: 80px;
+        }
+        #b7{ 
+            position: relative;
+            bottom: 30px;
+            left: 40px;
+        }
+        .C3{
+            border: 5px solid maroon;
+            background-color: khaki;
+        }
+         /*absolute: means poeition w.r.t to its parent */
+         #b11{
+            position: absolute;
+            /* top: 20px; */   /*It will be top or bottom from initial/parent element */
+            left: 50px;       /*it is left from parent(1st) element*/
+            /* bottom: 0px; */
+        }
+        #b15{
+            /* fixed means it will not move from its place at any codition */
+            position: fixed;
+            top: 50px;
+            right: 30px;
+            font-size: large;
+          }
+          .C5{
+            border: 5px solid maroon;
+            background-color: khaki;
+            padding: 30px; 
+            /* background: url(image.jpg);  */   /*what to do if i want toset the width of image here*/
+           }
+          #b18{
+              position: sticky;
+              right: 20px;
+              bottom: 30px;
+          }
+          #b20{
+              position: sticky;
+              left: 20px;
+              top: 30px;
+          }
+        .A{
+            background-color: rgb(213, 228, 243);
+            border: 2px solid rgb(60, 55, 139);
+            width: 150px;
+            height: 150px;
+            margin: 15px;
+            display: inline-block;
+        }
+        #c{
+            position: absolute;
+            right: 30px;
+            /* bottom: 2px; */
+           
+        }
+    </style>
+</head>
+<body>
+    <!-- .box#b + enter -->
+    <div class="C1">
+    <h3>Static</h3>
+    <div class="box" id="b1">1</div>
+    <div class="box" id="b2">2</div>
+    <div class="box" id="b3">3</div>
+    <div class="box" id="b4">4</div>
+</div>
+    <hr>
+    <div class="C2">
+    <h3>Relative</h3>
+    <div class="box" id="b5">5</div>
+    <div class="box" id="b6">6</div>
+    <div class="box" id="b7">7</div>
+    <div class="box" id="b8">8</div>
+</div>
+    <hr>
+    <div class="C3">
+    <h3>Absolute</h3>
+    <div class="box" id="b9">9</div>
+    <div class="box" id="b10">10</div>
+    <div class="box" id="b11">11</div>
+    <div class="box" id="b12">12</div>
+</div>
+    <hr><div class="C4">
+    <h3>Fixed</h3>
+    <div class="box" id="b13">13</div>
+    <div class="box" id="b14">14</div>
+    <div class="box" id="b15">15: It is fixed</div>
+    <div class="box" id="b16">16</div>
+</div>
+    <hr>
+    <div class="C5">
+    <h3>Sticky</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores itaque officia laborum nulla esse, quos maxime id voluptate omnis, praesentium ea deserunt adipisci quasi nisi. Possimus debitis veniam ex velit harum ipsum quasi, distinctio amet quis facere vero sapiente, obcaecati totam laudantium ab ipsam, minima fugit. Culpa aut officia dolores molestias maxime! Nemo dolorum odit quos delectus laboriosam? Sit in reiciendis accusantium maiores culpa eos, enim saepe alias cumque quas, fugiat nulla mollitia repellendus. At dolores fugiat adipisci. Consectetur cupiditate, ratione pariatur perspiciatis officiis rerum. Quos quidem fugit molestiae, tenetur aliquid veniam velit exercitationem magni cum sequi voluptatum ipsum consectetur, atque voluptate ad repellat iusto quibusdam nulla rerum aut? Illum impedit repellendus molestiae sint ipsa tempore deserunt rerum veritatis nulla modi quae omnis, id culpa! Cum nobis, quae ad at harum laboriosam pariatur eum tempora, voluptas quisquam fugit ab esse, eligendi quo veniam quis laborum. Doloremque quos fugiat nobis illo magni mollitia magnam esse. Praesentium nisi dolor, nobis rem iste doloribus magnam alias, quisquam tempore eligendi repellat. Eaque voluptatum harum modi dolore, similique aliquam labore architecto et commodi. Autem distinctio, sequi ratione eum consequuntur labore modi ex rerum? Aliquam inventore ea repellendus? Deserunt fuga exercitationem in obcaecati quo expedita a dignissimos. Nesciunt impedit minima excepturi, debitis dolorum velit culpa aliquam quasi aperiam vitae maiores, ut reiciendis dicta consequatur obcaecati beatae error et, consectetur neque ea natus illum doloremque consequuntur. Consequuntur ducimus esse, totam odio repellat beatae vero suscipit obcaecati odit assumenda? Ipsa sequi magni nisi ad sapiente, harum aperiam, nostrum explicabo maxime tempore reprehenderit nobis corrupti expedita? Accusamus officia atque officiis fugiat? Vero, iste eveniet laudantium libero eius non saepe! Ullam illum praesentium et. At praesentium doloremque ea sint adipisci in asperiores minus minima perspiciatis. Facere culpa, molestias facilis, dolore beatae rem temporibus fuga repellendus vero veritatis unde ipsum ea?</p>
+    <div class="box" id="b17">17</div>
+    <div class="box" id="b18">18</div>
+    <div class="box" id="b19">19</div>
+    <div class="box" id="b20">20</div>
+</div>
+<h3>Absolute</h3>
+<div class="A" id="a">a</div>
+<div class="A" id="b">b</div>
+<div class="A" id="c">c</div>
+<div class="A" id="d">d</div>
+</body>
+</html>

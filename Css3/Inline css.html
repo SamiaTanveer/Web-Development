@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline Css</title>
+</head>
+<body>
+    <!-- In inline, style tag is added along with attribute -->
+    <!-- Inline can't use multiple style tags. But if we write multiple tags then last 1 style will be consider -->
+  <h1 style="background: aqua; color: rgb(26, 63, 63); font-size: 100px; border: 2px solid black;">University</h1>
+    <div class="Graduation">Graduation</div>
+    <style>
+        .Graduation{
+            background-color:lime;
+            color: blue;
+            font-size: x-large;
+            /* In inline border can be apply using both "border/bordere-style" tag */
+            border: dashed red;
+        }
+    </style>
+    <br>
+    <div class="Undergraduate">Undergraduate</div>
+    <style>
+        .Undergraduate{
+            color: black;
+            background-color: silver;
+            font-size: xx-large;
+            font-style: italic;
+            border: 1rem solid;
+        }
+    </style>
+    <br>
+    <section class="PHD">PHD</section>
+    <style>
+.PHD{
+    background-color: pink;
+    font-size: 10ch;
+    font: bold;
+    /* border: 0pt solid; */
+    border: 4mm ridge rgba(170, 50, 220, .6);
+    /* border: 4mm peru; */
+}
+    </style>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum laborum itaque soluta reiciendis id magni atque, corporis veritatis, quae deserunt quod eveniet ea tempora! Repudiandae impedit consequatur quasi sint. Ad.</p>
+    <style>
+        p{
+            border-style: groove;
+        }
+    </style>
+</body>
+</html>

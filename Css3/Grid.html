@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Grid-1</title>
+    <!-- it is a display property -->
+    <style>
+         .Item-1{
+             /* display: grid, inline-grid, */
+          display: grid;   /*this grid only define rows*/
+          grid-template-columns: repeat(4,3fr);      /*for diff size of rows use ths syntax:1fr 3fr 5fr,  1px 3px 5px,  1px auto 5px*/
+          grid-template-rows: repeat(4,1fr);
+          grid-row-gap: 1rem;  /*or only use "grid-gap"*/
+          grid-column-gap: 3rem;
+        }
+       .G1{
+          background-color: burlywood;
+          color: darkmagenta;
+          border:2px solid purple;
+          padding: 3px 5px;
+        }
+        .Item-2{
+            display: grid;
+            grid-template-rows: 1fr 1fr 4fr;  /*for first-3 rows*/
+            grid-auto-rows: 2fr;   /*for all remaining/  not define rows*/
+            /* grid-template-columns: repeat(9, 2fr); */
+            grid-template-columns: 1fr 4fr;
+            grid-gap: 1rem;
+        }
+        .G2{
+            background: mediumpurple;
+            border: 2px solid coral;
+        }
+        .Item-3{
+           display: grid;
+           grid-template-columns: repeat(5,1fr);
+           grid-template-rows: repeat(4,1fr);
+           /* grid-column-gap: 7rem;
+           grid-row-gap: 1rem; */
+           grid-gap: 1rem;
+
+       }
+       .G3{
+           background: rgb(98, 165, 127);
+           border: 2px solid lawngreen;
+           padding: 15px;
+       }
+       .G3:first-child{
+           /* Start mtlb starting line to end. yahan jitni value di hai utne columns and rows ki jagah ley gi */
+           /* grid-column-start: 1;
+           grid-column-end: 3;
+           grid-row-start: 1;
+           grid-row-end: 3; */
+           /* shortcut of above  lines is */
+           grid-column: 1/ span 2;
+           grid-row: 1/ span 2;
+        }
+        .Item-4{
+            display: grid; 
+            grid-gap: 1rem;
+            /* grid-template-columns: 112px 112px 112px; */
+            /* see it in responsive */
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));  /*only write gtc*/
+            /* justify-content: center; */
+        }
+        .G4{
+            background-color: rgb(115, 47, 150);
+            border: 3px solid lightpink;
+            color: white;
+            padding: 20px;
+        }
+        .Item-5{
+            display: grid;
+        }
+        .G5{
+            background: cadetblue;
+            border: 2px solid purple;
+        }
+        .Item-5{
+            display: grid;
+            grid-gap: 1rem;
+        }
+        .G5{
+            background: cadetblue;
+            border: 2px solid purple;
+        }
+        .Item-6{
+            display: grid;
+            grid-gap: 1rem;
+            /* in ths area no of rows and column should be same */
+            grid-template-areas:  
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer'
+            ;
+           
+        }
+        .G6{
+            background: yellow;
+            border: 2px solid black;
+            padding: 5px 10px;
+        }
+        #navbar{grid-area: navbar;}
+        #section{grid-area: section;}
+        #aside{grid-area: aside;}
+        #footer{grid-area: footer;}
+    </style>
+</head>
+<body>
+    <h1>Grid</h1>
+<div class="Item-1">
+    <div class="G1">Item-1</div>
+    <div class="G1">Item-2</div>
+    <div class="G1">Item-3</div>
+    <div class="G1">Item-4</div>
+    <div class="G1">Item-5</div>
+    <div class="G1">Item-6</div>
+    <div class="G1">Item-7</div>
+    <div class="G1">Item-8</div>
+    <div class="G1">Item-9</div>
+    <div class="G1">Item-10</div>
+    <div class="G1">Item-11</div>
+    <div class="G1">Item-12</div>
+    <div class="G1">Item-13</div>
+    <div class="G1">Item-14</div>
+    <div class="G1">Item-15</div>
+    <div class="G1">Item-16</div>
+</div>
+    <h2>Rows & gaps in grid</h2>
+    <div class="Item-2">
+    <!-- div.G2{Product-$}*16 -->
+    <div class="G2">Product-1</div>
+    <div class="G2">Product-2</div>
+    <div class="G2">Product-3</div>
+    <div class="G2">Product-4</div>
+    <div class="G2">Product-5</div>
+    <div class="G2">Product-6</div>
+    <div class="G2">Product-7</div>
+    <div class="G2">Product-8</div>
+    <div class="G2">Product-9</div>
+    <div class="G2">Product-10</div>
+    <div class="G2">Product-11</div>
+    <div class="G2">Product-12</div>
+</div>
+<h2>Spanning Multiple rows & Columns</h2>
+<div class="Item-3">
+    <div class="G3">Product-1</div>
+    <div class="G3">Product-2</div>
+    <div class="G3">Product-3</div>
+    <div class="G3">Product-4</div>
+    <div class="G3">Product-5</div>
+    <div class="G3">Product-6</div>
+    <div class="G3">Product-7</div>
+    <div class="G3">Product-8</div>
+    <div class="G3">Product-9</div>
+    <div class="G3">Product-10</div>
+    <div class="G3">Product-11</div>
+    <div class="G3">Product-12</div>
+    <div class="G3">Product-13</div>
+    <div class="G3">Product-14</div>
+    <div class="G3">Product-15</div>
+    <div class="G3">Product-16</div>
+</div>
+<h2>Autofit & MinMax</h2>
+<!-- div.G4{Box-$}*12 -->
+    <div class="Item-4">
+    <div class="G4">Box-1</div>
+    <div class="G4">Box-2</div>
+    <div class="G4">Box-3</div>
+    <div class="G4">Box-4</div>
+    <div class="G4">Box-5</div>
+    <div class="G4">Box-6</div>
+    <div class="G4">Box-7</div>
+    <div class="G4">Box-8</div>
+    <div class="G4">Box-9</div>
+    <div class="G4">Box-10</div>
+    <div class="G4">Box-11</div>
+    <div class="G4">Box-12</div>
+    <div class="G4">Box-13</div>
+</div>
+<h2>Grid Layouts</h2>
+<div class="Item-5">
+    <div class="G5">This is item-1</div>
+    <div class="G5">This is item-2</div>
+    <div class="G5">This is item-3</div>
+    <div class="G5">This is item-4</div>
+    <div class="G5">This is item-5</div>
+    <div class="G5">This is item-6</div>
+    <div class="G5">This is item-7</div>
+    <div class="G5">This is item-8</div>
+    <div class="G5">This is item-9</div>
+    <div class="G5">This is item-10</div>
+    <div class="G5">This is item-11</div>
+    <div class="G5">This is item-12</div>
+</div>
+<br>
+<div class="Item-6">
+    <div class="G6" id="navbar">Home about More Contact-us</div>
+    <div class="G6" id="section">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nam quaerat corrupti voluptas est cumque voluptate maxime modi accusantium error voluptatum eius rerum deleniti dolores, a dolor? Quidem, beatae cupiditate quisquam, autem ea odit blanditiis magnam ipsum deleniti placeat soluta dolores, iste eaque laboriosam vitae numquam doloremque ad nostrum. Fugiat.</div>
+    <div class="G6" id="aside">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi animi, ex aliquam non, voluptatem asperiores repellendus expedita quas eius fuga possimus doloribus. Tenetur quas doloremque ea debitis quia repudiandae impedit, nostrum dolor tempore aspernatur rem amet est beatae nemo esse!</div>
+    <div class="G6" id="footer">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et tempora nesciunt, pariatur facere assumenda fugit!</div>
+</div>
+</body>
+</html>

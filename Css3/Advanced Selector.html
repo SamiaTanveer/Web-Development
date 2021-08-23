@@ -1,0 +1,95 @@
+<!-- 1: Type  -->
+<!-- 2: ID -->
+<!-- 3: Class -->
+<!-- 4: Pseudo Class= :hover -->
+<!-- 5: Pseudo Element= :: -->
+                <!-- Advance Selector -->
+<!-- 6: Attribute -->
+<!-- 7: Universal  e.g *{}   -->
+<!-- 8: Combinatory (Chid at any stage). Given below -->
+<!-- 9: Add e.g .class,p -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Selectors</title>
+    <!-- Test all these 1-by-1 -->
+    <style>
+        /* div p{ 
+            background: skyblue;
+            color: blue;
+        } */
+
+
+        /* div li p{ 
+            background:khaki;
+            color:maroon;
+        } */
+
+
+        /* for direct child of div */
+        /* div > p{
+            background: lawngreen;
+            color: rgb(10, 112, 10);
+        } */
+
+        /* for all siblings */
+        /* div ~ p{
+            background: pink;
+            color:rgb(155, 24, 46);
+        } */
+
+        
+        /* uspe apply ho gi jika previous sibling div hoga. Siblings mean elements at same level*/
+        /* div + p {
+            background: crimson;
+            color: white;
+        }  */
+
+        /* Add selector  */
+        /* .Content,p{
+            background: silver;
+            color: crimson;
+            border: 2px solid green;
+        } */
+    </style>
+
+    <style>
+        /* universal selctor,it is apply at all */
+        /* *{border: 2px solids blueviolet;} */
+        #G1::first-letter{color: green; font-size: 40px;}
+        #G1::first-line{ color: red;}
+        a[href="https://www.wikipedia.com"]{color: green;}
+        input[type="text"]{background: gray;}
+ </style>
+</head>
+<body>
+    <h1>Advace Selectors</h1>
+    <div class="Cover">
+        <div class="Content">
+        <ul>
+            <li><p>This is first para inside li</p></li>
+            <li>This is second para inside li</li>
+        </ul>
+    </div>
+        <p>This is 3rd para inside div (Direct child of div)</p>
+    </div>
+    <p>This is 4th para outside of div</p>
+    <hr>
+    <hr>
+    <hr>
+    <h3>Pseudo Element</h3>
+    <div id="G1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non odit aperiam deserunt! Recusandae consequatur veritatis iste repellendus, in obcaecati numquam facilis nesciunt quisquam unde dolorum incidunt placeat atque perferendis repellat earum maiores nihil id fugiat mollitia. Exercitationem mollitia doloremque laudantium molestias, quo libero, voluptatibus ea vitae impedit, iste reprehenderit deleniti.</div>
+    <h3>Attribute selector</h3>
+    <div id="G2">
+        <!-- all links have same id but color o 2nd link is green due to attribute selector -->
+        <a href="https://www.google.com">Click here to go to Google</a><br>
+        <a href="https://www.wikipedia.com">Click here to go to Wikipedia</a><br>
+        <a href="https://www.youtube.com">Click here to go to Yutube</a><br><br>
+        <input type="#" placeholder="Enter your roll-no"><br> <br>
+        <input type="#" placeholder="Enter your ID"><br>
+    </div>
+</body>
+</html>

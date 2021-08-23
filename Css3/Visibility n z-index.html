@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<htmlC lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility n z-index</title>
+    <style>
+        /* Visibility: visible( default ),collapes,hidden. Also difference  b/w hidden visibility and ddisplay none */
+         .V{
+            border: 2px solid blue;
+            background-color: burlywood;
+            height: 200px;
+            padding: 30px;
+        }
+        .A{
+            width: 150px;
+            height: 150px;
+            border: 2px solid maroon;
+            float: left;
+        }
+        #v1{
+            background-color: rgb(131, 212, 212);
+        }
+        #v2{
+            background-color: rgb(126, 28, 28);
+            visibility: visible;
+        }
+        #v3{
+            background-color: rgb(165, 157, 44);
+        }
+        #v4{
+            background-color: mediumspringgreen;
+        }
+        .B{
+            width: 150px;
+            height: 150px;
+            border: 2px solid maroon;
+            float: right;
+            margin-left: 30px;
+        }
+        #v5{
+            background-color: rgb(131, 212, 212);
+        }
+        #v6{
+            background-color: rgb(126, 28, 28);
+            /* Not working */
+            visibility: collapse;
+            left: 50px;
+            top: 50px;
+        }
+        #v7{
+            background-color: rgb(165, 157, 44);
+        }
+        #v8{
+            background-color: mediumspringgreen;
+        }
+        .C{
+            width: 150px;
+            height: 150px;
+            border: 2px solid maroon;
+            float: left;
+        }
+        #v9{
+            background-color: rgb(131, 212, 212);
+        }
+        #v10{
+            background-color: rgb(126, 28, 28);
+            /* <!-- In visibility hidden, element disappears but keep reserved its place --> */
+            visibility: hidden;  
+        }
+        #v11{
+            background-color: rgb(165, 157, 44);
+        }
+        #v12{
+            background-color: mediumspringgreen;
+        }
+         
+        .D{
+            width: 150px;
+            height: 150px;
+            border: 2px solid maroon;
+            float: left;
+        }
+        #v13{
+            background-color: rgb(131, 212, 212);
+        }
+        #v14{
+            background-color: rgb(126, 28, 28);
+            /* in display none, element is totally disappears and not reserved its place*/
+            display: none;
+        }
+        #v15{
+            background-color: rgb(165, 157, 44);
+        }
+        #v16{
+            background-color: mediumspringgreen;
+        }
+        /* #layer{
+            border: 2px solid blue;
+            background-color: burlywood;
+            height: 300px;
+            padding: 30px;  
+        } */
+        #v17{
+            background-color: rgb(131, 212, 212);
+        }
+        #v18{
+            background-color: rgb(126, 28, 28);
+            position: relative;
+            top: 50px;
+            left: -50px;
+        }
+        #v19{
+            background-color: rgb(165, 157, 44);
+            position: relative;
+            top: 100px;
+            left: -100px;
+        }
+        #v20{
+            background-color: mediumspringgreen;
+            position: relative;
+            top: 150px;
+            left: -150px;
+        }
+        /* Z-index: konsa box sb se uper rahe ga(having highest z-index) phr nichey so on */
+        #v21{
+            background-color: rgb(131, 212, 212);
+            z-index: 2;
+        }
+        #v22{
+            background-color: rgb(126, 28, 28);
+            position: relative;
+            top: 50px;
+            left: -50px;
+            z-index: 3;
+        }
+        #v23{
+            background-color: rgb(165, 157, 44);
+            position: relative;
+            top: 100px;
+            left: -100px;
+            z-index: 1;
+        }
+        #v24{
+            background-color: mediumspringgreen;
+            position: relative;
+            top: 150px;
+            left: -150px;
+            z-index: 4;
+        }
+</style>
+</head>
+<body>
+    <h1>Visibility</h1>
+    <!-- div.V#v$*4 + enter . & means 1,2,3...-->
+    <div class="V">
+        <h2>visible</h2>
+    <div class="A" id="v1"></div>
+    <div class="A" id="v2"></div>
+    <div class="A" id="v3"></div>
+    <div class="A" id="v4"></div>
+</div>
+    <hr>
+    <div class="V">
+        <h2>Collapes</h2>
+    <div class="B" id="v5"></div>
+    <div class="B" id="v6"></div>
+    <div class="B" id="v7"></div>
+    <div class="B" id="v8"></div>
+</div>
+<hr>
+<!-- In visibility hidden, element disappears but keep reserved its place -->
+<div class="V">
+    <h2>Hidden</h2>
+    <div class="C" id="v9"></div>
+    <div class="C" id="v10"></div>
+    <div class="C" id="v11"></div>
+    <div class="C" id="v12"></div>
+</div>
+<hr>
+<!-- in display none, element is totally disappears and not reserved its place -->
+<div class="V">
+    <h2>display(none)</h2>
+    <div class="D" id="v13"></div>
+    <div class="D" id="v14"></div>
+    <div class="D" id="v15"></div>
+    <div class="D" id="v16"></div>
+</div>
+<h1>Layers</h1>
+<div class="V">
+<div class="A" id="v17"></div>
+<div class="A" id="v18"></div>
+<div class="A" id="v19"></div>
+<div class="A" id="v20"></div>
+</div>
+<h1>Z-index</h1>
+<div class="V">
+    <div class="A" id="v21"></div>
+    <div class="A" id="v22"></div>
+    <div class="A" id="v23"></div>
+    <div class="A" id="v24"></div>
+    </div>
+</body>
+</htmlC

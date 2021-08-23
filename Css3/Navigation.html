@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        .N1{background: rgb(107, 57, 57);
+            border-radius: 30px;
+        
+        }
+        .N1 ul{overflow: auto;}
+        .N1 li{
+            float: left;
+            list-style: none;
+            margin: 13px 20px;
+        }
+        .N1 li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            font-size: large;
+            color: white;
+        }
+        .N1 li a:hover{
+            color: khaki;
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .N1 input{
+            border: 2px solid black;
+            border-radius: 4px;
+            padding: 5px 17px;
+            width: 129px;
+        }
+
+        .N2 ul{
+            background-color: skyblue;
+            /* use for bullets */
+            list-style-type: none;
+            border: 2px solid blueviolet;
+            overflow: auto;
+        }
+        .N2 li{
+            /* Content comes out of container due to float */
+            /* when we use float bc color disappears bcz li comes out of the container of ul, therefore we use overflow tag */
+            float: left;
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="N1">
+            <ul>
+                <!-- li*4 -->
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">More</a></li>
+                <div class="search">     
+                    <input type="text" name="search" id="search" placeholder="search this website">
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <nav class="N2">
+    <ul>
+        <li>Home</li>
+        <li>Service</li>
+        <li>Contact</li>
+        <li>More</li>
+    </ul>
+</nav>
+</body>
+</html>

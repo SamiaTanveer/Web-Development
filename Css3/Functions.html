@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <style>
+        /* it is use to change things overall, e.g we have a very lenghty sheet and we want to change the bc color of overall then insteadof changing color of all paras we just have to change the color of root */
+        :root{
+            --bc-color: palegreen;
+            --border: 5px solid purple;
+        }
+        #f1{
+            background-color: teal;
+            height: 200px;
+            width: 70%;
+            margin-bottom: 50px;
+        }
+        #f2{
+            background-color: teal;
+            height: 200px;
+            margin-bottom: 50px;
+            width: calc(100% - 200px);
+        }
+        a{
+            width: 30px;
+            height: 10px;
+            margin: 30px;
+            margin-bottom: 50px;
+            padding: 11px;
+            background-color: lightcoral;
+        }
+        #f3{
+            background-color: var(--bc-color);
+            border:var(--border) ;
+        }
+        #f4{
+            background-color: var(--bc-color);
+            border: var(--border);
+        }
+        #img1{
+            width: 200px;
+            float: right;
+        }
+        #img2{
+            width: 200px;
+            float: left;
+        }
+        #p1{
+            border: 2px solid maroon;
+            /* overflow: auto; */
+        }
+        #img3{
+            width: 200px;
+            float: right;
+        }
+       
+        #content{
+            background-color: palevioletred;
+            width: 70%;
+            height: 100px;
+            float: right;
+        }
+        #sidebar{
+            background-color: orange;
+            width: 30%;
+            height: 100px;
+            float: right;
+        }
+        #footer{
+            background-color: saddlebrown;
+        }
+        .clear{
+            width: 800px;
+            margin: auto;
+           border: 6px solid purple;
+           background-color: rgb(164, 194, 194);
+        }
+        .Mart{
+            border: 2px solid rgb(161, 147, 161);
+            background-color: rgb(236, 219, 219);
+            padding: 3px;
+            margin: 10px;
+        }
+        #fruits{
+           float: left;
+           width: 40%;
+        }
+        #Vege{
+           float: right;
+           width: 50%;
+        }
+        #Shake{
+             /* float: left; */
+           width: 95%;
+        }
+        #Juice{
+            clear: left;    /*Clear-tg*/
+            clear: right;   /*or only use clear-both*/
+          width: 95%;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div id="f1">See the difference by inspection</div>
+    <div id="f2">See the difference by inspection</div>
+    <hr>
+    <a href="https://www.google.com">Google</a> 
+    <button>Read more</button> <br><br>
+    <div id="f3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus doloremque laboriosam reprehenderit vel repellendus facere debitis obcaecati veniam, animi soluta perferendis unde illo quasi, quam illum hic minus sint ex voluptatem quia perspiciatis in possimus delectus labore? Soluta, aut totam?
+    </div> <br>
+    <div id="f4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quae quidem dignissimos ex doloremque amet nihil doloribus illo totam debitis itaque qui, id, possimus beatae iure eveniet enim, maiores in sint. Fugit magni beatae consequuntur necessitatibus est expedita rem error aut earum quam a esse, facere veniam fugiat consequatur numquam in molestiae labore? Sunt eligendi, veritatis doloribus non, quas amet laudantium qui perspiciatis, suscipit dolores facilis praesentium? Voluptatem perferendis dolore, sit consectetur aliquam totam excepturi velit. Nobis architecto quis quos! Iste animi ipsum minus laudantium sed! Dicta nostrum quisquam nulla maxime excepturi. Alias modi minima excepturi illum magnam praesentium maiores?</div>
+    <h1>Float</h1>
+    <p><img src= image.png id="img1"> m ipsum dolor sit amet ipsum dolor sit amet  nudh bydfdt bhgd geuegy bhgdh uchdydy bhcgyde hcgduey  b hdhdudg ipsum dolor sit amet  nudh bydfdt bhgd geuegy bhgdh uchdydy bhcgyde hcgduey  b hdhdudg ipsum dolor sit amet  nudh bydfdt bhgd geuegy bhgdh uchdydy bhcgyde hcgduey  b hdhdudg ipsum dolor sit amet  nudh bydfdt bhgd geuegy bhgdh uchdydy bhcgyde hcgduey  b hdhdudg ipsum dolor sit amet  nudh bydfdt bhgd geuegy bhgdh uchdydy bhcgyde hcgduey  b hdhdudg   nudh bydfdt bhgd geuegy bhgdh uchdydy bhcgyde hcgduey  b hdhdudg budheue hudegtd bcujdbu cbhduj consectetur adipisicing elit. Unde, voluptatibus. Quibusdam totam vero dolorem aliquam at aperiam deleniti dolore ea laborum expedita dolor unde inventore, similique vitae ullam veniam adipisci culpa? Libero, optio quo! nhff bffh bfhfuf bfhfuf bfhh  hifhu nkdhff bhdfdtheh bdhebyerve budgdruhd djbij8fuhf jiuibdybfed gydg7tegeud g87drw b8wcfn gcecgy Iste incidunt corrupti<img src= image.png id="img2"> magni doloremque veniam atque assumenda nostrum deleniti ad ipsum aliquid et eum earum dicta, facere fugiat repudiandae libero, dolorem minus. Non hic, ullam repellat explicabo ipsum facere blanditiis quae minus nemo eligendi quasi vel ipsa asperiores deleniti ducimus quod placeat aliquid quam libero odio! Voluptatum possimus aperiam perferendis autem neque recusandae dicta excepturi. At fuga dicta aliquid, rem deserunt praesentium in minus labore sint mollitia eaque, tempore dolore voluptas. Officia perferendis vero sequi porro laboriosam, natus tempora distinctio non? Obcaecati dignissimos veritatis inventore voluptas consequatur eos. Voluptatum repudiandae ab atque nihil dolore accusamus dolores distinctio ut aperiam ad inventore beatae culpa accusantium, itaque quisquam, nemo voluptate amet unde modi in consequatur corrupti? Dolores tempore cumque eos vitae explicabo tenetur, numquam maiores itaque impedit optio eum reiciendis incidunt corporis nam a voluptates nostrum quos laborum consequuntur consectetur blanditiis voluptatum magnam dolorem distinctio. Expedita aliquam doloremque soluta molestiae aliquid blanditiis ut, exercitationem deleniti optio. Ipsa consequuntur consectetur perspiciatis numquam vitae tenetur. Itaque sit doloremque voluptas?</p>
+    <p id="p1"> <img src= image.png id="img3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, in dolores quidem, tenetur perferendis debitis corporis recusandae, inventore at minus quaerat voluptatibus soluta sunt alias expedita similique iure exercitationem provident quisquam ad officia quae nostrum dolore. Cupiditate incidunt, accusamus voluptatem autem sit, minima rerum ipsum totam pariatur repellat error sunt modi et fugiat aut adipisci aspernatur. Repudiandae, facere aspernatur eum quos consequatur sapiente excepturi magni dolor nobis dicta consequuntur neque unde? Aliquid corrupti blanditiis doloribus molestiae distinctio sapiente, provident adipisci ab dicta neque perspiciatis repellat, necessitatibus harum debitis. Deserunt, culpa praesentium! Eveniet architecto perspiciatis quod ullam voluptatum omnis, ex temporibus.</p>
+    <hr>
+    <div id="content">Content</div>
+    <div id="sidebar">Side bar</div>
+    <div id="footer">Footer</div>
+    <h1>Clear</h1>
+    Without clear tag
+<div class="clear">
+    <div id="fruits" class="Mart">
+        <h3>Fruits</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores doloremque ipsum dolor ad accusamus distinctio fuga optio quo dolorem. Nam id facilis officiis animi facere labore pariatur! Temporibus, doloremque neque, totam, repellat odio animi reiciendis provident suscipit eveniet cum dignissimos!</p>
+    </div>
+    <div id="Vege" class="Mart">
+        <h3>Vege</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores doloremque ipsum dolor ad accusamus distinctio fuga optio quo dolorem. Nam id facilis officiis animi facere labore pariatur! Temporibus, doloremque neque, totam, repellat odio animi reiciendis provident suscipit eveniet cum dignissimos!</p>
+    </div>
+     <div class="Mart" id="Shake">
+        <h3>Shake</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores doloremque ipsum dolor ad accusamus distinctio fuga optio quo dolorem. Nam id facilis officiis animi facere labore pariatur! Temporibus, doloremque neque, totam, repellat odio animi reiciendis provident suscipit eveniet cum dignissimos!</p>
+    </div>
+</div>
+<br>
+With clear tag
+<div class="clear">
+    <div id="fruits" class="Mart">
+        <h3>Fruits</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores doloremque ipsum dolor ad accusamus distinctio fuga optio quo dolorem. Nam id facilis officiis</p>
+    </div>
+    <div id="Vege" class="Mart">
+        <h3>Vege</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores doloremque ipsum dolor ad accusamus distinctio Maiores doloremque ipsum dolor ad accusamus distinctMaiores doloremque ipsum dolor ad accusamus distinctMaiores doloremque ipsum dolor ad accusamus distinctfuga optio quo dolorem. Nam id facilis officiis</p>
+    </div>
+     <div class="Mart" id="Juice">
+        <h3>Juice</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores doloremque ipsum dolor ad accusamus distinctio fuga optio quo dolorem. Nam id facilis officiis</p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-2</title>
+    <style>
+          /* display: grid, inline-grid, */
+          /* For gap: grid-column-gap,  grid-row-gap, grid-gap(it is use for both column and row gap) */
+          /* Grid Lines: grid-row/column-start, grid-row/column-end (It define no of lines e.g, starting from 1 and distribute content into 3 rows/columns) */
+          /* grid-template -rows/ Column: it defines no and size of rows/column */
+          .G7{
+              background: cadetblue;
+              border: 1px solid black;
+              padding: 20px;
+              margin: 10px;
+              font-size: 18px;
+              text-align: center;
+          }
+        .Item-7{
+            background-color:cyan;
+            width: 800px;
+            margin: 20px auto;
+            padding: 40px;
+            display: grid;   /*it only divide contents into rows*/
+            grid-template-columns: auto auto 300px 150px auto auto;
+            grid-template-areas: 
+            'A1 A1 A1 A1 A1 A1 ' /* no of all rows must be same */
+            'A2 A2 A3 A3 A4 A4'     
+            'A2 A2 A5 A5 A5 A5' ; }
+        #A1{grid-area: A1;}
+        #A2{grid-area: A2;  grid-row: 2/ span 3;}
+        #A3{grid-area: A3;}
+        #A4{grid-area: A4;}
+        #A5{grid-area: A5;}
+
+       
+       
+        .Item-8{
+            background: lawngreen;
+            padding: 30px;
+            width: 800px;
+            margin: auto;
+            /* grid-gap: 1rem; */
+            display: grid;
+            grid-template-areas: 
+            'A6 A6 A6 A6 A7 A7'
+            'A8 A8 A9 A9 A7 A7'
+            'A10 A10 A10 A10 A10 A10';}
+        #A6{grid-area:  A6;}
+        #A7{grid-area:  A7;}
+        #A8{grid-area:  A8;}
+        #A9{grid-area:  A9;}
+        #A10{grid-area:A10;}
+
+        .Item-9{
+            background: cornflowerblue;
+            padding: 20px;
+            width: 550px;
+            margin: auto;
+            display:grid;
+            grid-template-rows: repeat(3,1fr);
+            grid-template-columns: repeat(4, 110px);
+        }
+        /* Howver, if I chnage id no with same command layout will not change */
+        #A21{grid-area: 2/ 1 / span 2 /span 3;}
+
+        .Item-10{
+            background: cornflowerblue;
+            padding: 20px;
+            width: 550px;
+            margin: auto;
+            display: grid;
+            /* grid-template-rows: repeat(2,1fr); */
+            grid-template-columns: repeat(5, 110px); /*I can do same thing with more boxes by increasing no.of columns and boxes, both*/
+        }
+        #A24{grid-area: 1 / 2/ 4 / 5; background: cornsilk;}
+           
+    </style>
+</head>
+<body>
+    <h1>CSS Grid Layout Module</h1>
+    <div class="Item-7">
+        <div class="G7" id="A1">This is Header</div>
+        <div class="G7" id="A2">This is Menue</div>
+        <div class="G7" id="A3">This is Main</div>
+        <div class="G7" id="A4">This is Right</div>
+        <div class="G7" id="A5">This is Footer</div>
+    </div>
+    <div class="Item-8">
+        <div class="G7" id="A6">This is item.no-6</div>
+        <div class="G7" id="A7">This is item.no-7</div>
+        <div class="G7" id="A8">This is item.no-8</div>
+        <div class="G7" id="A9">This is item.no-9</div>
+        <div class="G7" id="A10">This is item.no-10</div>
+    </div>
+    <h2>Grid-area Property</h2>
+    <div class="Item-9">
+        <div class="G7" id="A11">Item-11</div>
+        <div class="G7" id="A12">Item-12</div>
+        <div class="G7" id="A13">Item-13</div>
+        <div class="G7" id="A14">Item-14</div>
+        <div class="G7" id="A15">Item-15</div>
+        <div class="G7" id="A16">Item-16</div>
+        <div class="G7" id="A17">Item-17</div>
+        <div class="G7" id="A18">Item-18</div>
+        <div class="G7" id="A19">Item-19</div>
+        <div class="G7" id="A20">Item-20</div>
+        <div class="G7" id="A21">Item-21</div>
+    </div>
+    <h2>grid-row/column-start/end</h2>
+    <div class="Item-10">
+        <div class="G7" id="A22">Item-22</div>
+        <div class="G7" id="A23">Item-23</div>
+        <div class="G7" id="A24">This is item.no-24</div>
+        <div class="G7" id="A25">This is item.no-25</div>
+        <div class="G7" id="A26">This is item.no-26</div>
+        <div class="G7">This is item.no-27</div>
+        <div class="G7">This is item.no-28</div>
+        <div class="G7">This is item.no-29</div>
+        <div class="G7">This is item.no-30</div>
+        <div class="G7">This is item.no-31</div>
+        <div class="G7">This is item.no-32</div>
+        <div class="G7">This is item.no-33</div>
+    </div>
+        <!-- <div class="G7">This is item.no-34</div>
+        <div class="G7">This is item.no-35</div>
+        <div class="G7">This is item.no-36</div>
+        <div class="G7">This is item.no-37</div>
+        <div class="G7">This is item.no-38</div>
+        <div class="G7">This is item.no-39</div>
+        <div class="G7">This is item.no-40</div>
+        <div class="G7">This is item.no-41</div>
+        <div class="G7">This is item.no-42</div>
+        <div class="G7">This is item.no-43</div>
+        <div class="G7">This is item.no-44</div>
+        <div class="G7">This is item.no-45</div>
+        <div class="G7">This is item.no-46</div>
+        <div class="G7">This is item.no-47</div>
+        <div class="G7">This is item.no-48</div>
+        <div class="G7">This is item.no-49</div>
+        <div class="G7">This is item.no-50</div> -->
+</body>
+</html>

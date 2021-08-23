@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Over Flow</title>
+    <style>
+        .f{
+            width: 600px;
+            height: 100px;
+            margin-bottom: 150px;
+            color: blueviolet;
+            background-color: khaki;
+            border: 2px solid coral;
+        }
+        #f2{
+            overflow: visible;
+        }
+        #f3{
+            overflow: hidden;
+        }
+        #f4{
+            overflow: scroll;
+        }
+        #f5{
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        /* Not working */
+        /* #f6{
+            overflow-x: scroll;
+            overflow-y: hidden;
+        } */
+        #f7{
+            resize: both;
+            margin-bottom: 30px;
+        }
+        #f8{
+            resize: none;
+        }
+        #f9{
+            list-style-type: circle;
+        }
+        li{
+            border: 2px solid slateblue;
+        }
+        #f10{
+            /* has been resize image via photopea */
+        list-style-image: url(a.png);
+        }
+        #f11{
+            list-style-image: url(a.png);
+            list-style-position: inside;
+        }
+        /* not working */
+        /* #f13{
+            list-style-type: lower-alpha;
+        } */
+        /* we can use height, width, text-align etc to make it better */
+        table{
+            /* it is useto combine borders */
+            /* border-collapse: collapse; */
+            border: 2px solid maroon;
+            background-color: khaki;
+            margin-bottom: 30px;
+         }
+        caption{
+            border: 2px solid maroon;
+            caption-side: bottom;
+        }
+        th{border: 2px solid maroon;}
+        tr{border: 2px solid maroon;}
+        td{border: 2px solid maroon;
+            /* use to hide empty cell */
+            empty-cells: hide;   
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Css Overflow</h1>
+<!-- /When the size of content is greater than size of container, overflow is use -->
+Simple<div class="f" id="f1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolore laborum adipisci maiores earum omnis quidem, ullam officiis ab doloremque id totam, sequi eos maxime sed distinctio officia provident aliquid obcaecati qui tenetur, assumenda delectus deleniti autem! Sequi at tempore pariatur non itaque, quae laborum! Esse earum voluptate quae quia sunt est, voluptatum expedita cumque laborum ab tempora deleniti, consequatur et repellendus asperiores rem modi veniam ipsam nostrum at. Facere ab nam vero ipsum laborum illo, corrupti magni animi eligendi voluptatem iste est placeat nobis doloremque maxime fugit, pariatur necessitatibus. Quaerat explicabo totam nostrum doloremque iste suscipit deleniti consectetur aspernatur?</div>
+Visible Overflow<div class="f" id="f2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus dolorum exercitationem atque cupiditate, praesentium totam impedit quis itaque quod quibusdam iusto! Modi at enim nulla sit temporibus quidem, tenetur architecto odio et provident debitis. Dolore, quae! Nobis repellendus et ut incidunt placeat error accusantium veniam nam itaque ad facilis nesciunt nostrum libero laboriosam similique fugit tenetur est, magnam quidem? Accusantium amet sunt non quos magni quisquam ullam ad ipsum libero, architecto officia enim reprehenderit aliquid corrupti facilis ea quam? Necessitatibus nesciunt eos maxime molestias ratione. Maxime tempore nisi maiores rem dolore recusandae illo ea illum veritatis! Placeat officiis soluta architecto.</div>
+Hidden overflow<div class="f" id="f3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, asperiores! Et quas consequatur quibusdam labore temporibus iusto, recusandae aliquam. Nesciunt, officiis nulla quis pariatur veniam et deserunt eos? Numquam cum sed nostrum expedita velit voluptate, facere odit obcaecati itaque perspiciatis unde earum dicta perferendis a debitis repellat vero iure non nobis sint magni delectus eum ratione. Laudantium fuga culpa modi eaque voluptatem. Reiciendis error similique repellat incidunt cupiditate, unde exercitationem nulla et repudiandae facilis, molestias dolorum perferendis voluptatem? Ab fugiat, assumenda tempora explicabo mollitia consectetur quis, enim et quia quidem architecto quae id facere. Doloribus eveniet asperiores reprehenderit voluptates! Possimus.</div>
+Scroll overflow<div class="f" id="f4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, facere maxime? Ratione, ullam natus officia quae ipsa voluptates incidunt soluta magnam deleniti atque, impedit saepe veritatis sit porro. Maxime saepe ducimus, molestiae sequi accusantium itaque, eaque praesentium esse nobis facere voluptatibus beatae nulla quis libero vel. Soluta debitis tempore mollitia. Quibusdam eius unde aliquid repellat ratione, fugiat, numquam dolorum et, officia ut libero. Laborum inventore quae dolor autem, veritatis voluptates quod facilis est reiciendis hic eos dolore eum, totam cum porro, qui possimus consequuntur! Quibusdam nulla officia reprehenderit rerum accusamus sint cupiditate at consequuntur alias, ipsa, ullam sunt libero! Inventore molestias blanditiis similique debitis, veritatis beatae aut nam facere autem laudantium labore vel aliquam laborum aperiam dolorem distinctio. Error alias iusto cumque delectus tempore nihil distinctio a debitis consequuntur optio repellendus exercitationem incidunt perspiciatis ipsa placeat amet repudiandae illum ad iste, dolores explicabo quia aspernatur harum. Perferendis, delectus. Dolorum, temporibus.</div>
+<div class="f" id="f5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos aut quis ut explicabo iste rerum cupiditate ratione vitae ipsum debitis ullam quo atque provident ea officia, excepturi facilis animi? Magni dicta velit molestiae inventore quasi eaque, hic non deserunt veniam saepe, accusantium dolor? Rerum reprehenderit voluptas eligendi necessitatibus? Labore nulla exercitationem corporis accusamus et sit, velit id impedit dolorem expedita suscipit aperiam voluptates ad non, beatae ab consequatur iusto maiores reprehenderit! Tenetur sint sunt corrupti officiis mollitia odit dignissimos tempore accusamus, eos delectus adipisci molestias saepe animi, nobis quae. Aut cupiditate deserunt modi officiis fugiat totam optio similique itaque alias!</div>
+<div class="f" id="f6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta culpa expedita nisi, facilis excepturi dolorum fuga debitis corrupti aperiam eum consequatur perferendis quae impedit eos, veritatis quam aliquam ipsum repudiandae adipisci itaque sunt. Enim, eum quasi asperiores vitae modi maxime tenetur ducimus, laudantium deserunt magnam sed delectus totam! Neque perferendis, porro debitis quis, nam quos enim aliquam officia perspiciatis exercitationem tempore quisquam ducimus maxime earum consequatur dolorum animi eaque quas itaque rerum illum? Quo animi temporibus illo voluptatibus officia numquam dolore suscipit corrupti quisquam, explicabo iusto natus in quasi alias quae facere ab iure atque aliquid. Ab necessitatibus nobis suscipit?</div>
+<!-- It is resizeable by user in different ways and  directions -->
+<textarea name="f" id="f7" cols="30" rows="10">Textarea, and it is resizeable by user</textarea> <br>
+<textarea name="f" id="f8" cols="30" rows="10">Textarea, it is not resizeable.</textarea>
+<h1>Lists</h1>
+<h3>Un-ordered list</h3>
+<div class="l" id="f9">
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+</div>
+Simple/ Outside icon<div class="l" id="f10">
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+</div>
+Inside icon<div class="l" id="f11">
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+</div>
+<hr>
+<h3>Ordered List</h3>
+<div class="l" id="f12">
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ol>
+</div>
+<div class="l" id="f13">
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ol>
+</div>
+<hr>
+<div id="T1">
+<table>
+    <tr>
+        <th>abcd</th>
+        <th>abcd</th>
+        <th>abcd</th>
+        <th>abcd</th>
+    </tr>
+    <tr>
+        <td>abcd</td>
+        <td>abcd</td>
+        <td>abcd</td>
+        <td>abcd</td>
+    </tr>
+    <tr>
+        <td>abcd</td>
+        <td>abcd</td>
+        <td>abcd</td>
+        <td>abcd</td>
+    </tr>
+</table>
+</div>
+<table>
+    <caption>Marksheet of students</caption>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Sir name</th>
+        <th>Marks</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>1</td>
+        <td>Zuha</td>
+        <td></td>
+        <td>100</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Zoha</td>
+        <td>Usman</td>
+        <td>90</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Mishal</td>
+        <td>Javaid</td>
+        <td>80</td>
+    </tr>
+</tbody>
+</table>
+</body>
+</html>

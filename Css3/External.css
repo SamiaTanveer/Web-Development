@@ -1,0 +1,155 @@
+h1{
+    background-color: rgb(106, 189, 161);
+    color: brown;
+    /* Shortcut of border: width style color */
+    border: 2px dotted blue;
+}
+.Metric{
+    background-color: rgb(228, 113, 113);
+    color: black;
+    border-style: dotted;
+}
+/* Multiple  borders */
+#Nine{
+    background-color: rgb(220, 220, 235);
+    color:red;
+    /* clockwise: top,right,bottom,left */
+    border-style: solid dashed dotted none;
+     /* we can apply diff properties for each border */
+     border-color:red black green;
+     border-width: 5px 2px 8px;
+}
+#Tenth{
+    background-color:mediumspringgreen;
+    color: saddlebrown;
+    border-style: ridge solid;
+    border-color: blue;
+    border-radius: 30px; /*Border radius*/
+}
+#border1{
+    border-top-style:solid;
+    border-top-width: 10px;
+    border-top-color: saddlebrown ;
+}
+#border2{
+    background-color:rgb(197, 219, 211);
+    color: rgb(114, 56, 15);
+    border-style: ridge solid;
+    border-color: blue;
+    border-radius: 30px 80px; /* Multiple radius...use for diff shapes*/
+}
+#border3{
+    border:  5px solid green;
+    border-top-left-radius: 50px; /* This is use if we want to change corner shapes */
+}
+.B{
+    border: 30px solid transparent;
+    padding: 20px;
+    margin: 30px auto;
+}
+/*round, space, repeat, stretch*/
+#border4{
+    border-image: url(border.png) 15% round;
+}
+#border5{
+    border-image: url(border.png) 10% repeat;
+}
+#border6{
+    border-image: url(border.png) 35% space;
+}
+#border7{
+    border-image: url(border.png) 30% stretch;
+    border-width: 40px;
+}
+#height{
+    background-color: khaki;
+    height: 300px ; /*We prefer px bcz it maintain size in diff devices*/
+    width: 500px;
+}
+#height1{
+    background-color: khaki;
+    height: 300%; /*in % heightand width depends on size of parent/div */
+    width: 500%; 
+}
+#height2{
+    background-color: rosybrown;
+    height: 300%;
+    width: 500%;
+    max-height:800px ;
+    max-width: 1000px ;
+    min-height:400px ;
+    min-width:500px ;
+}
+#priority{
+    border-color: red !important;
+}
+/* Syntax for multiple BC */
+p{
+    background-color: yellow;
+    background-image: url('image.jpg'), url('image.png');
+    background-repeat: no-repeat;
+    /* If we want to apply both images then BC position is required */
+    background-position: left bottom, right top;
+}
+/* Padding */
+#padding{
+    border: 2px solid red;
+}
+#padding1{
+    border: 2px solid red;
+    padding: 50px;
+}
+#padding2{
+    border: 2px solid red;  
+    padding-top: 50px;
+}
+#padding3{
+    border: 2px solid red;
+    padding-top: 20px;   
+    padding-right: 50px;
+    padding-bottom: 80px;
+    padding-left: 110px;
+    /* Shortcut */
+    /* clockwise: top,right,bottom,left */
+    /* padding: 10px 40px 90px 20px; */
+}
+/* Margen */
+/* Without Margen */
+#margen1{
+border: 1px solid red;
+}
+#margen2{
+    border: 1px solid red;
+}
+#margen3{
+    border: 1px solid blue;
+}
+/*div{
+    border: 5px dotted green;         /*If i uncomment this and commit below div then margen 7,8 will have no div border*/
+/* }*/ 
+/* With Margen */
+#margen4{
+    border: 1px solid red;
+    margin: 20px;  /*it margin's all sides*/
+    }
+    #margen5{
+        border: 1px solid red;
+        margin-right: 60px;
+    }
+    #margen6{
+        border: 1px solid blue;
+        margin-top: 50px;
+        margin-left: 80px;
+        margin-bottom: -30px;  /*-ve margin causes to come outside of border*/
+    }
+    #margen7{
+        border: 1px solid blue;
+        margin-bottom: 80px;
+    }
+    #margen8{
+        border: 1px solid blue;       /*Collapsing*/
+        margin-top: 30px;              /*Here i give 80px bottom and 30px top (110px) total margin, but margin b/w both paras display only 80px.It means margins collpes and only greater 1 value is display  */
+    }
+    div{
+        border: 5px dashed darkred;
+    }

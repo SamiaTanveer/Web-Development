@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple borders n Columns</title>
+    <!-- In internal css we add style tag in heading or below outide the body.It can use multiple styles -->
+    <style>
+h1{
+    background-color:palegreen;
+   /* Shortcut */
+   border: 5px solid orangered;
+   /* Other way */
+    border-style: inset;
+    /* border-color,size,etc are use for styling border */
+    border-color: 2px rgb(109, 28, 190);
+}
+/* Multiple Borders */
+.Intermediate{
+    background-color:cyan;
+      /* If wewant toapply diff borders on same para */
+    /* clockwise: top,right,bottom,left */
+    border-style: solid double ;
+    /* we can apply diff properties for each border */
+    border-color:red black;
+    border-width: 8px 10px;
+    
+}
+#Istyear{
+    background-color:rgb(194, 223, 115);
+    color:maroon;
+    border-style: solid;
+}
+#Secondyear{
+    background-color: rgb(207, 119, 78);
+    color:pink;
+    border-style: dotted;
+    border-color: blue;
+}
+    </style>
+
+<!-- Mmultiple Column -->
+<style>
+    #C1{
+        text-align: justify;
+        column-count: 3;
+        column-gap: 30px;
+        column-rule-width: 2px;   /*Shortcut for 3/ column-rule: 2px solid blue*/
+        column-rule-style: solid;
+        column-rule-color:blue;
+    }
+</style>
+</head>
+<body>
+    <h1>College</h1>
+    Muliple borders<div class="Intermediate">Intermediate
+        <br> <br>
+    Istyear<div id="Istyear">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ratione laborum itaque rem nemo odit omnis assumenda minima ipsam eum magni consequuntur aliquid doloribus, voluptas modi iusto in eius voluptates ea illum alias. Illum et fuga saepe perferendis cumque, vel corporis eius maxime consequuntur doloremque. Perspiciatis atque ab officia iusto.</div>
+    <br> 
+   Secondyear <div id="Secondyear">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam, officia beatae? Corporis officia neque magnam esse beatae nihil voluptate labore excepturi voluptatibus placeat, veritatis aperiam qui nesciunt veniam, vitae voluptatum repellendus, dignissimos ab quo. Tempora quo sunt excepturi sapiente ipsam!</div>
+</div>
+<hr>
+<h2>Multiple Column</h2>
+<h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere vero, assumenda ipsam molestias officiis porro. Deleniti ab culpa aspernatur voluptas?</h2>
+<div id="C1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus expedita cupiditate consectetur! Quas natus libero perspiciatis numquam accusamus facere veritatis dolor id nostrum fugiat quia eos praesentium atque ea modi in rerum delectus omnis, pariatur blanditiis. Quo quae sapiente, doloribus vitae molestias asperiores nemo nulla cum, cupiditate voluptatem quos mollitia, nostrum dicta? Maiores dolores doloremque in pariatur incidunt dolorem similique eaque exercitationem blanditiis? Fugit, impedit consectetur harum nemo, ad dolorum voluptatibus quae reprehenderit aperiam, velit illum aliquam. Dolore, ea impedit obcaecati tempora provident architecto tempore consequuntur, quaerat alias ad, magni doloribus iste odit deleniti possimus praesentium aliquam voluptas facere atque nemo. Atque in voluptate repudiandae natus fuga quas eligendi nulla unde veniam! Magni illum sunt, inventore nobis modi animi tempore possimus! Earum accusantium nisi temporibus! Repellat voluptatum modi iure maiores. Adipisci aliquid quod rem laborum dolorem architecto qui eius dolorum mollitia, praesentium sed nihil fuga cumque? Possimus id odit, commodi fugit esse optio aliquid corrupti tempore magnam. Consequuntur sunt reiciendis laboriosam debitis. Dolor, neque! Illum vel iusto, distinctio reiciendis laudantium ea assumenda, repellat vitae sequi voluptas neque iure. Architecto cum perspiciatis, laudantium ut sapiente ea obcaecati dignissimos, iste exercitationem ipsum culpa, autem voluptatibus. Nemo atque beatae, modi blanditiis vitae ducimus!</div>
+</body>
+</html>

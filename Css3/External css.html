@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External Css</title>
+    <!-- Externl css can use multiple sheets but if we don't choose a sheet then last sheet will be attach and display automatically -->
+    <link rel="stylesheet" href="External.css">
+    <style>
+        .Outline{
+            background-color: aquamarine;
+            border:5px solid blue;
+            font-size: large;
+            width: 800px;
+            height:120px;
+            margin: 40px auto;
+        }
+            /* Styles: dotted,dashed, solid, double,groove,ridge,inset,outset,none,hidden */
+          #a1{
+              outline-style: dotted;
+           }
+           #a2{
+               outline-style: dashed;
+               outline-color: rgb(240, 14, 14);
+               outline-width: 5px;
+           }
+           #a3{
+               outline-style: solid;
+               outline-color: rgb(141, 80, 177);
+               outline-width: 8px;
+               /* used for gap b/w border and outline */
+               outline-offset: 6px;
+           }
+           #a4{
+               outline-style: ridge; /*same as groove*/
+               outline-color: rgb(218, 252, 69);
+               outline-width: 12px;
+           }
+           #a5{
+               outline-style: inset;
+               outline-color:orange ;
+               outline-width: 12px;
+           }
+           #a6{
+               outline-style: outset;
+               outline-color: orange;
+               outline-width: 12px;
+           }
+           #a7{
+               outline-style: double;
+               outline-color: rgb(185, 67, 123);
+               outline-width: 18px;
+           }
+    </style>
+</head>
+<body>
+    <h1>Metric</h1>
+    <div class="Metric">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam temporibus accusamus voluptates molestiae, sint sapiente ipsum quas quo repellendus, odit accusantium rem fugiat quos culpa provident numquam, omnis quae neque?</div> <br>
+    <h3>Multiple border</h3>
+    <div id="Nine">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum cumque ipsa aut delectus ullam quo natus, quos eius vel. Harum possimus voluptas delectus in cumque earum, magni nemo, a laboriosam labore voluptates similique quasi velit quae architecto alias cum accusantium doloremque fuga? Iste dignissimos quaerat laudantium dolor voluptas voluptates soluta perferendis iusto ipsum facilis a ad, eligendi, atque nam delectus.</div><br>
+    <br> <h3>Border radius</h3>
+    <div id="Tenth">Lorem ipsum dolor sit amet consectetur, adipisicing elit. A modi minus, nisi provident perspiciatis libero ratione blanditiis amet eveniet, vitae maxime tempora sit, corporis error quisquam natus accusamus quia. Esse quos cumque laboriosam. Voluptas exercitationem nemo adipisci at, vitae facilis.</div><br> <br>
+    <div id="border1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque similique placeat quisquam ipsam molestiae, numquam fugit? Eligendi debitis quod harum natus impedit? Nobis quis, fugit omnis nulla a iusto iste itaque autem pariatur fugiat hic qui eligendi architecto velit deleniti.</div> <br>
+    <div id="border2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur nulla dolorum doloremque unde aut voluptatem sed temporibus earum voluptas. Itaque quod iste quas vel placeat odio dicta sint in cupiditate.</div> <br>
+    <div id="border3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, quia ipsam molestiae aut atque nostrum earum commodi nisi accusantium praesentium ducimus porro voluptates repellendus perferendis enim voluptatum dolore perspiciatis velit.</div> 
+    <hr>
+    <h1>Border-image</h1>
+    <div class="B">
+    <div class="B" id="border4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta mollitia laborum magni quibusdam quis molestias optio quidem id enim asperiores qui eaque tempore unde ea, dolores laboriosam et provident veritatis perspiciatis distinctio dolorum aut nam fugiat eveniet! Molestias, recusandae. Quia optio ex, quasi reprehenderit voluptatum quam dolor totam, praesentium obcaecati cumque distinctio iure! Ullam velit quam non consequuntur, temporibus corrupti nemo iste d voluptatem corporis veniam incidunt quibusdam asperiores officiis? Quis vero inventore nisi iusto veniam necessitatibus recusandae quibusdam? Dolor iste impedit a? Expedita praesentium doloremque dolore maxime ad nesciunt unde.</div>
+    <div class="B" id="border5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, provident?dolor sit amet consectetur, adipisicing elit. Tempore, prodolor sit amet consectetur, adipisicing elit. Tempore, prodolor sit amet consectetur, adipisicing elit. Tempore, pro Odio laboriosam ab enim harum reiciendis recusandae cumque autem eius delectus similique blanditiis nesciunt doloremque provident consequatur at, ea, suscipit amet quidem ut debitis? Quidem ipsa nisi impedit porro eum? Reprehenderit ut modi quidem? Autem animi illum sed excepturi aspernatur?</div>
+    <div class="B" id="border6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, provident?dolor sit amet consectetur, adipisicing elit. Tempore, prodolor sit amet consectetur, adipisicing elit. Tempore, prodolor sit amet consectetur, adipisicing elit. Tempore, pro Odio laboriosam ab enim harum reiciendis recusandae cumque autem eius delectus similique blanditiis nesciunt doloremque provident consequatur at, ea, suscipit amet quidem ut debitis? Quidem ipsa nisi impedit porro eum? Reprehenderit ut modi quidem? Autem animi illum sed excepturi aspernatur?</div>
+    <div class="B" id="border7">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, provident?dolor sit amet consectetur, adipisicing elit. Tempore, prodolor sit amet consectetur, adipisicing elit. Tempore, prodolor sit amet consectetur, adipisicing elit. Tempore, pro Odio laboriosam ab enim harum reiciendis recusandae cumque autem eius delectus similique blanditiis nesciunt doloremque provident consequatur at, ea, suscipit amet quidem ut debitis? Quidem ipsa nisi impedit porro eum? Reprehenderit ut modi quidem? Autem animi illum sed excepturi aspernatur?</div>
+</div>
+    <h1>Outline</h1>
+    <div class="Outline" id="a1">outline-dotted</div>
+    <div class="Outline" id="a2">outline-dashed</div>
+    <div class="Outline" id="a3">outline-solid + offset</div>
+    <div class="Outline" id="a4">outline-ridge, groove( both arree same)</div>
+    <div class="Outline" id="a5">outline-inset</div>
+    <div class="Outline" id="a6">outline-outset</div>
+    <div class="Outline" id="a7">outline-double</div>
+    Height in px<div id="height">Lorem ipsum dolor sit amet consectetur adipisicing elit. A necessitatibus sed officiis sint impedit commodi dolores ea voluptas vero error, unde perspiciatis, enim voluptatibus corporis earum atque omnis voluptates. Quas inventore dignissimos fuga nulla, consequuntur error aliquam exercitationem molestias sapiente!</div> <br>
+   Height in % <div id="height1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis tempora illo aut eligendi quidem provident? Maiores, deserunt aut voluptatum repellendus soluta qui cumque voluptas eveniet mollitia corrupti amet in recusandae, commodi, distinctio ratione doloribus repudiandae quam animi! Quis, beatae temporibus!</div><br>
+   <div id="height2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, aliquid autem reiciendis dignissimos dolor rerum a sint vero velit? Assumenda at, fugit reiciendis enim eaque beatae eius impedit amet doloremque rem deleniti harum corrupti officiis maxime. Aut culpa ut, atque sed corrupti neque illo porro dolores architecto! Consectetur, excepturi reprehenderit!</div> <br>
+   <!-- If we use all 3 ways at ones then periorities will be: inline >  in external and internal the last use tag will superior-->
+    <!-- If we want to ignore the priority/order then write " !important " at the end of line, but it is not good to use -->
+    <!-- For Example -->
+    Priority<div id="priority">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, reprehenderit possimus voluptatem nobis omnis odit asperiores minus labore porro, tenetur necessitatibus, distinctio quos debitis aliquam est dolore ratione fugit cumque.</div>
+    <style>
+        #priority{
+            border-color:solid black;
+        }
+    </style>
+</body>
+</html>

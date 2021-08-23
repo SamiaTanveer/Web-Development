@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .A{
+            background:khaki;
+            border: 4px solid brown;
+            width: 150px;
+            height: 150px;
+            padding: 30px;
+            margin: 30px;
+            float: left;
+        }
+        /* Shortcut/ animation: animation-name animation-duration timing-function delay iteration-conut fill-mode*/
+        @keyframes K1{
+            from{background-color: rgb(191, 119, 233);}
+            to{background-color: rgb(13, 153, 218);}
+        }
+        @keyframes K2{
+            0%{background: grey;}
+            25%{background: tomato;}
+            50%{background: chartreuse;}
+            75%{background: fuchsia}
+            100%{background:orangered ;}
+        }
+        @keyframes K3{
+            0%{background: grey;}
+            25%{width: 300px;}
+            50%{background: yellow}
+            75%{width: 300px;}
+            100%{background:aqua ;}
+        }
+        @keyframes K4{
+            0%{background: orange;}
+            50%{transform: scale(2);}
+            100%{background: chocolate;}
+        }
+        @keyframes K5{
+            0%{background: crimson}
+            50%{transform: scale(1.5);}
+            100%{background:mediumspringgreen;}
+        }
+        @keyframes K6{
+            10%{background: hotpink;}
+            50%{height: 200px;}
+            100%{background: lawngreen;}
+        }
+        @keyframes K7{
+            10%{background: hotpink;}
+            50%{height: 200px;}
+            100%{background: lawngreen;}
+        }
+        @keyframes K8{
+            0%{ background: aqua;border-radius: 0%;}
+            10%{ background: rgb(240, 114, 131);border-radius: 10%;}
+            20%{ background: rgb(154, 154, 185);border-radius: 20%;}
+            30%{ background: burlywood;border-radius: 30%;}
+            40%{ background: rgb(243, 95, 95);border-radius: 40%;}
+            50%{ background: orange;border-radius: 50%;}
+            60%{ background: yellow;border-radius: 60%;}
+            70%{ background:magenta;border-radius: 70%;}
+            80%{ background: rgb(183, 218, 115);border-radius: 50%;}
+            90%{ background: crimson;border-radius: 20%;}
+            100%{ background: rgb(73, 185, 139);border-radius: 10%;}
+        }
+        @keyframes K9{
+            from{ width: 200px;}
+            to{ width: 450px;}
+        }
+        @keyframes K10{
+            0%  {top: 0px ;   left: 0px;}
+            25% {top: 250px;  left: 0px;}
+            75% {top: 250px;  left:250px;}
+            100%{top: 0px;    left: 250px;}
+        }
+        #A1{ animation-name: K1;  animation-duration: 2s; }
+        #A2{ animation-name: K2; animation-duration: 3s; animation-timing-function: ease-in-out;}
+        #A3{ animation-name: K3; animation-duration: 5s; }
+        #A4{ animation-name: K4; animation-duration: 5s; ;}
+        #A5{ animation-name: K5; animation-duration: 2s; animation-iteration-count: 4; }
+        #A6{ animation-name: K6; animation-duration: 5s;  }
+        #A7{ animation-name: K7; animation-duration: 5s; animation-direction: reverse; }/*reverse, alternate, alternate-reverse*/
+        #A8{ animation-name: K8; animation-duration: 4s; animation-iteration-count: infinite; animation-timing-function: linear; }
+        #A9{background: lawngreen;
+            width: 1300px;
+            border: none;
+            margin: 10px; }
+       
+        #B1{
+            width: 200px;
+            height: 150px;
+            font-size: larger;
+            position: relative;
+            color: aqua;
+            background-color: green;
+            animation-name: K9;
+            animation-duration: 2s;
+            animation-fill-mode: forwards; /*forward, reverse, both, backward, alternate*/
+        }
+        #B2{
+            width: 180px;
+            height: 150px;
+            margin: 30px;
+            font-size: larger;
+            position: relative;
+            background-color: green;
+            animation-name: K10;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+            animation-fill-mode: alternate;
+            animation-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- now, wew can do animation in Css3 without javascript. It was not available in Css1,2  -->
+    <!-- wedefine a keyframe: mens what,when and  how to do -->
+    <div class="A" id="A1">A1</div>
+    <div class="A" id="A2">A2</div>
+    <div class="A" id="A3">A3</div>
+    <div class="A" id="A4">A4: Animation-Delay + Transorm</div>
+    <div class="A" id="A5">A5: iteration-count for rerpeatition</div>
+    <div class="A" id="A6">A6: Animation-direction</div>
+    <div class="A" id="A7">A7: Reverse o A6</div>
+    <div class="A" id="A8">A8: Multiple properties</div>
+    <div class="A" id="A9">
+        <div id="B1">Can or can't restore its initial look</div>
+    </div>
+    <div class="A" id="A9">
+        <div id="B2"></div>
+    </div>
+</body>
+</html>

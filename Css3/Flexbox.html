@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        h3{margin: 0px; padding: 0px;}
+       .Flex{
+           background: coral;
+            margin: 10px;
+            display: flex;
+        }
+        .child{
+            background: khaki;
+            margin: 20px;
+            padding: 20px;
+            /* display: inline-block; */
+        }
+        .child2{
+            background: khaki;
+            margin: 20px;
+            padding: 20px;
+            width: 100px; /*This width will apply when flex-wrap= wrap in container3*/
+        }
+        #container1{
+            background: rgb(159, 161, 35);
+            flex-direction: row; /*row-reverse, column, column-reverse*/
+        }
+       #container2{
+            background: maroon;
+            flex-wrap: wrap; /*Wrap, no-wrap, reverse*/
+        }
+       #container3{
+            background: maroon;
+            flex-wrap: nowrap;
+        }
+        #container4{
+            background: rgb(177, 121, 121);
+            /* Shortcut for using flex-direction and wrap in 1 line */
+           flex-flow: row wrap-reverse;
+        }
+        #container5{
+            background: seagreen;
+           flex-flow: row wrap-reverse;
+           /*flex-start (default), center, flex-end, space-around, space-between, space-evenly*/
+           justify-content: space-between;  
+        }
+        #container6{
+            background: rgb(192, 66, 192);
+            height: 400px;
+            flex-flow: row wrap;
+            align-items: stretch;
+            justify-content: space-between; /*It is reverse to align-content*/ 
+            /* stretch(default), center, flex-start, flex-end */
+          align-content: space-between;
+        }
+        #container7{
+            background: rgb(139, 119, 230);
+           flex-flow: row wrap;
+           justify-content: space-between;  
+           height: 300px;
+           /* stretch(default), center, flex-start, flex-end */
+           align-items: stretch;
+        }
+        #container8{
+            background: cadetblue;
+            margin: auto;
+           flex-flow: row wrap;
+           height: 50vh;  /*by using vh, box will adjust its by by itself in respopnsive*/
+           /* width: 150vh; */
+           justify-content: center;
+           align-items: center;
+        }
+        #container10{
+            background: goldenrod;
+           height: 250px;
+        }
+        #C29{order: 2;}
+        #C30{order: 3;}
+        #C31{order: 1;}
+        #C32{flex-grow: 1;}
+        #C33{flex-grow: 1;}
+        #C34{flex-grow: 3;}
+        #C35{flex-shrink: 5;}
+        #C38{flex-shrink: 3;}
+        #C41{flex-shrink: 8;}
+        #C46{flex-basis: 300px;}
+        #C48{align-self: flex-start;}
+        #C49{align-self: center;}
+        #C50{align-self: flex-end;}
+    </style>
+</head>
+<body>
+    <h3>Flex-direction</h3>
+    <div class="Flex" id="container1">
+        <div class="child" id="C1">Child 1</div>
+        <div class="child" id="C2">Child 2</div>
+        <div class="child" id="C3">Child 3</div>
+        <div class="child" id="C4">Child 4</div>
+        <div class="child" id="C5">Child 5</div>
+    </div>
+    <h3>Flex-wrap: wrap</h3>
+    <div  class="Flex" id="container2">
+        <div class="child2" id="C6">Child 6</div>
+        <div class="child2" id="C7">Child 7</div>
+        <div class="child2" id="C8">Child 8</div>
+        <div class="child2" id="C9">Child 9</div>
+        <div class="child2" id="C10">Child 10</div>
+        <div class="child2" id="C11">Child 11</div>
+        <div class="child2" id="C12">Child 12</div>
+        <!-- <div class="child2" id="C13">Child 13</div>
+        <div class="child2" id="C14">Child 14</div> -->
+    </div>
+    <h3>Flex-wrap: nowrap</h3>
+    <div  class="Flex" id="container3">
+        <div class="child2" id="C6">Child 6</div>
+        <div class="child2" id="C7">Child 7</div>
+        <div class="child2" id="C8">Child 8</div>
+        <div class="child2" id="C9">Child 9</div>
+        <div class="child2" id="C10">Child 10</div>
+        <div class="child2" id="C11">Child 11</div>
+        <div class="child2" id="C12">Child 12</div>
+        <div class="child2" id="C13">Child 13</div>
+        <div class="child2" id="C14">Child 14</div>
+    </div>
+    <h3>Flex-flow</h3>
+    <div  class="Flex" id="container4">
+        <div class="child2" id="C6">Child 6</div>
+        <div class="child2" id="C7">Child 7</div>
+        <div class="child2" id="C8">Child 8</div>
+        <div class="child2" id="C9">Child 9</div>
+        <div class="child2" id="C10">Child 10</div>
+        <div class="child2" id="C11">Child 11</div>
+        <div class="child2" id="C12">Child 12</div>
+        <div class="child2" id="C13">Child 13</div>
+        <div class="child2" id="C14">Child 14</div>
+    </div>
+    <h3>Justify-Content</h3>
+    <div class="Flex" id="container5">
+        <div class="child2" id="C15">Child 15</div>
+        <div class="child2" id="C16">Child 16</div>
+        <div class="child2" id="C17">Child 17</div>
+    </div>
+    <h3>Align-Content</h3>
+    <div class="Flex" id="container6">
+        <div class="child2" id="C18">Child 18</div>
+        <div class="child2" id="C19">Child 19</div>
+        <div class="child2" id="C20">Child 20</div>
+        <div class="child2" id="C18">Child 18</div>
+        <div class="child2" id="C19">Child 19</div>
+        <div class="child2" id="C20">Child 20</div>
+        <div class="child2" id="C21">Child 19</div>
+        <div class="child2" id="C22">Child 20</div>
+        <div class="child2" id="C23">Child 20</div>
+        <div class="child2" id="C24">Child 20</div>
+    </div>
+    <h3>Align-item</h3>
+    <div class="Flex" id="container7">
+        <div class="child2" id="C25">Child 15</div>
+        <div class="child2" id="C26">Child 16</div>
+        <div class="child2" id="C27">Child 17</div>
+    </div>
+    <h3>Justify-content + Align item</h3>
+    <div class="Flex" id="container8">
+        <div class="child2" id="C28">Child 15</div>
+    </div>
+    <h3>same as above with chid order </h3>
+    <div class="Flex" id="container8">
+        <div class="child2" id="C29">Child 29</div>
+        <div class="child2" id="C30">Child 30</div>
+        <div class="child2" id="C31">Child 31</div>
+    </div>
+    <h3>Flex-grow </h3>
+    <div class="Flex" id="container9">
+        <div class="child2" id="C32">Child 29</div>
+        <div class="child2" id="C33">Child 30</div>
+        <div class="child2" id="C34">Child 31</div>
+    </div>
+    <h3>Flex-Shrink(oppo to flex-grow) </h3>
+    <!-- yehumey btata hai k jb nowrap me space km ho jaye to space adjust krne k liye konsi item ki space km krni hai -->
+    <div class="Flex" id="container9">
+        <div class="child2" id="C35">Child 35</div>
+        <div class="child2" id="C36">Child 36</div>
+        <div class="child2" id="C37">Child 37</div>
+        <div class="child2" id="C38">Child 38</div>
+        <div class="child2" id="C39">Child 39</div>
+        <div class="child2" id="C40">Child 40</div>
+        <div class="child2" id="C41">Child 41</div>
+        <div class="child2" id="C42">Child 42</div>
+        <div class="child2" id="C43">Child 43</div>
+        <div class="child2" id="C44">Child 44</div>
+    </div>
+    <h3>Flex-basis</h3>
+    <div class="Flex" id="container9">
+        <div class="child2" id="C45">Child 42</div>
+        <div class="child2" id="C46">Child 43</div>
+        <div class="child2" id="C47">Child 44</div>
+    </div>
+    <h3>Align-self</h3>
+    <div class="Flex" id="container10">
+        <div class="child2" id="C48">flex-start</div>
+        <div class="child2" id="C49">Center</div>
+        <div class="child2" id="C50">flex-end</div>
+        <div class="child2" id="C50">flex-end</div>
+        <div class="child2" id="C49">Center</div>
+        <div class="child2" id="C48">flex-start</div>
+    </div>
+</body>
+</html>

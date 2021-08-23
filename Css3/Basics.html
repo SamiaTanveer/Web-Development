@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics and Text</title>
+    <!-- There are 3 ways to add CSS in html -->
+    <!-- If we use all 3 ways at ones then periorities will be: inline >  in external and internal the last use tag will superior-->
+    <!-- If we want to ignore the priority/order then write " !important " at the end of line -->
+    <!-- /* # indicates ID and dot indicate class(Div) */ -->
+    <!-- For class : ( div.name or .name ) + enter  -->
+   <!-- For Id: ( div#name or #name ) + enter  -->
+    <style>
+        /* Here below, p is class and p1,p2... are the elements of class p */
+        .p{
+            border: 2px solid blue;
+            background-color: aliceblue;
+        }
+        #p1{
+            text-align: center;
+            /* in some language e.g urdu we need to chnage direction  */
+            direction: ltr; 
+        }
+        #p2{
+            text-decoration: underline;
+        }
+        #p3{
+            text-decoration: overline;
+        }
+        #p4{
+            text-decoration: line-through;
+        }
+        #p5{
+            text-transform: uppercase;
+        }
+        #p6{
+            text-transform: lowercase;
+        }
+        #p7{
+            text-transform: capitalize;
+        }
+        #p8{
+            /* gap b/w lines */
+           line-height: 30px;
+           /* gap at starting */
+           text-indent: 90px;
+        }
+        #p9{
+            letter-spacing: 3px;
+        }
+        #p10{
+            word-spacing: 20px;
+        }
+        #p11{
+            /* If we need extra space and extra breakine in content */
+            white-space: pre;
+        }
+        #p12{
+          /* write its use */
+            white-space: nowrap;
+        }
+        #p13{width: 700px;
+            word-wrap: break-word;
+        }
+        #p14{
+            padding: auto;
+            font-size: 70px;
+            /* horizontal-shadow vertical-shadow blurness color */
+            text-shadow: 5px 10px 5px red;
+        }
+        #p15{
+            padding: auto;
+            font-size: 70px;
+            /* for changing direction of shadow change sign of values */
+            text-shadow: 15px -10px 5px red;
+        }
+        #p16{
+            width: 200px;
+            height: 110px;
+            writing-mode: vertical-lr;
+        }
+        #p17{
+            height: 200px;
+            width: 110px;
+            writing-mode: vertical-rl;
+        }
+        #p18{
+            height: 100px;
+            writing-mode: h;
+        }
+        /* Links */
+        a{
+            text-decoration: none;
+        }
+        a:link{ color: red;}
+        a:visited{ color: blue;}
+        a:hover{ color: green;}
+        a:active{ color: mediumaquamarine;}
+        #p19{
+            font-size: 25px;
+            font-weight: bolder;
+            font-style: italic;
+        }
+        #p20{
+            font-style: italic;
+            font-size: 17px;
+        }
+        #p21{
+            /* it is use capital words are intend to write in small size. e.g here except L are all small in size*/
+            font-variant: small-caps;
+            font-size: 20px;
+        }
+        #p22{
+            font-size: 50px;
+            /* instead of box shadow ,drop-shadow can also be use */
+            /* 3rd value is used for blurness */
+            box-shadow: 20px 20px 40px gray;
+        }
+        #p23{
+            width: 200px;
+            margin: 50px;
+            padding: 50px;
+            /* 4th value is of spread radius, determine spreading region */
+            box-shadow: 20px 20px 40px 40px gray;
+        }
+        #p24{
+            width: 200px;
+            margin: 20px;
+            margin-left: 100px;
+            padding: 50px;
+            box-shadow: -30px 40px  gray;
+        }
+        #p25{
+            width: 200px;
+            padding: 50px;
+            box-shadow: -30px 40px 20px gray inset;
+        }
+        #p26{
+            width: 200px;
+            padding: 50px;
+           margin-left: 50px;
+            box-shadow: 30px 40px 20px gray,-30px 40px 20px gray, -30px 40px 30px black inset;
+        }
+        /* box-reflect property can be: below, above, left , or right. */
+        .r{
+            padding: 30px;
+        }
+        #p27{
+            -webkit-box-reflect: right 5px; /*Reflection offsetjhbg4  n  uhjmmmmmmmnu7yuy--0u6xsg525sg55tfg67yt668 n6 */
+        }
+        #p28{
+            margin-left: 300px;
+            -webkit-box-reflect: left;
+        }
+        #p29{
+            margin-left: 300px;
+            margin-bottom: 120px;
+            /* Css reflection with gradient */
+            -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+        }
+        #color-box{
+            width: 500px;
+            height: 200px;
+            margin-bottom: 30px;
+            background-color: blue;
+            /* Range of opacity is 0-1. at 0 it wil fully disappear */
+            opacity: 0.5;
+        }
+        #Box{
+            width: 200px;
+            height: 300px;
+            margin-top: -150px;
+            margin-bottom: 30px;
+            background-color:red;
+            opacity: 0.5;  
+        }
+        /* hover lighten the image when cursor becomes on it  */
+        img:hover{
+            opacity: 0.5;
+        }
+        #blur{
+            filter: blur(2px);
+        }
+        /* it is given in % */
+        #brightness{
+        filter: brightness(30%);
+        }
+        #BnW{
+            filter: grayscale(80%);
+        }
+        #hue-rotate{
+            /* i is given in degrees */
+            filter: hue-rotate(70deg);
+        }
+        #invert{
+        filter: invert(100%);
+        }
+        #sepia{
+            filter: sepia(50%);
+        }
+        /*multiple filters is Not working */
+        /* #Filters{
+            filter: drop-shadow(50px 50px 30px  green);
+            filter:invert(100%), blur(2px);
+        } */
+        .G{
+            width: 900px;
+            height: 300px;
+            margin-bottom: 20px;
+            border: 2px solid black;
+        }
+        #p30{
+            background-image: linear-gradient(green, blue,black);
+        }
+        #p31{
+            /* to--- is use for direction of colors */
+            background-image: linear-gradient(to right, orange, brown 40%, indigo);
+        }
+        #p32{
+            /* % is use for color space occupation */
+            background-image: linear-gradient(to bottom right,orange,pink 10%,indigo 20%,yellow 70%);
+        }
+        #p33{
+            background-image: linear-gradient(160deg,aqua,indigo,pink);
+        }
+        #p34{
+            /* bydefault its shap is ellipes */
+            background-image: radial-gradient(aqua,pink,indigo);
+        }
+        #p35{
+            background-image: radial-gradient(circle,gray 20%,yellow 30%,brown 50%, pink);
+        }
+
+    </style>
+</head>
+<body> 
+  Center-Align and directin<div class="p" id="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis dolorem earum animi dicta iste. Veritatis, nulla. Fuga quo error laudantium, cum autem odit recusandae nobis pariatur quis aperiam, quae voluptate distinctio? Quaerat, itaque? Perspiciatis molestias laudantium impedit minus, ab harum aliquid quas fugiat exercitationem eum ex labore consequuntur, mollitia dolor itaque voluptatum, numquam quis inventore ad nesciunt rerum deleniti. Beatae nostrum placeat recusandae eligendi eius quos debitis perspiciatis cumque natus hic veniam ipsa aperiam, qui expedita illum, minus, quam id quaerat veritatis! In perspiciatis molestias saepe optio! Ratione ea doloremque natus perferendis modi, dolores illum, totam sapiente, placeat iusto harum?</div><br>
+  Underlin<div class="p" id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aut culpa exercitationem numquam corrupti voluptate veniam inventore ullam fugiat quisquam.</div><br>
+  Overline<div class="p" id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi itaque, ad facere fugiat quas, corrupti consequuntur, ipsam optio in est eos! Sequi, deserunt doloremque. Maxime corporis mollitia voluptas molestias impedit! Veniam, at, animi, omnis voluptate ea hic culpa recusandae cupiditate dolores debitis quisquam natus maxime voluptas neque ducimus labore incidunt.</div><br>
+  Line Through<div class="p" id="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quod incidunt dolore eligendi cupiditate quidem vel hic aliquid, animi officiis, laborum, sit illo doloribus explicabo est minus et? Maxime, officia!</div><br>
+  <br>
+  <h2>Text-Transform</h2>
+  Upper-case<div class="p" id="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo adipisci ad quaerat? Aut, laborum? Et, voluptatibus velit? Eum laborum sit, mollitia quidem, sapiente ipsam odit accusantium, nisi ducimus minima quisquam.</div> <br>
+  Lower-case<div class="p" id="p6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque laboriosam itaque deserunt suscipit illo animi dolores necessitatibus vero repellat omnis.</div> <br>
+  Capitalize<div class="p" id="p7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ad exercitationem labore, autem ea quasi est delectus distinctio dignissimos commodi veniam, nemo laboriosam vitae placeat tenetur nisi impedit temporibus expedita?</div><br>
+  Line-Height and Text-indent<div class="p" id="p8">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, neque aspernatur at error accusantium itaque quo, velit alias, necessitatibus iusto debitis veniam nihil earum eius quidem nostrum! Eius iusto nesciunt porro, minima molestias cumque maiores totam, incidunt possimus, placeat ad necessitatibus ipsam. Modi animi, quaerat exercitationem fugiat optio tempora culpa est voluptate architecto distinctio deserunt rerum natus deleniti veritatis sunt non minus dolor ipsam. Error dolores velit dignissimos rem! Facere amet molestiae ea nisi ullam repellat iure in tenetur, eveniet, pariatur recusandae atque alias accusamus iste quos dolore veritatis ipsum consequatur. Dolore officia harum accusamus quod, iusto labore delectus aliquid?</div> <br>
+  Letter-Spacing<div class="p" id="p9">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi at laborum iste vel illum dolorem nesciunt natus hic quasi corporis ullam ut quibusdam, provident alias nihil placeat. Maxime, officia eligendi!</div> <br>
+  Word-Spacing<div class="p" id="p10">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum expedita delectus ipsam, neque qui labore. Eos exercitationem ut, quia dolore labore vel eligendi sapiente nobis consequuntur amet. Nemo, quaerat corrupti?</div>
+  <br>
+  <h2>White-Space</h2>
+  White-Space (pre)<div class="p" id="p11">Lorem ipsum            dolor sit amet consectetur adipisicing elit. Asperiores sed veritatis voluptatem quod rerum ipsam dolorem in excepturi itaque quas mollitia commodi ipsum 
+           officia delectus error dicta omnis illum, tempore odio distinctio, fugiat quibusdam expedita. Explicabo doloremque voluptatem omnis voluptatibus placeat, molestias, quasi aut reprehenderit quos repudiandae dolore at nesciunt?</div>
+  <br>         
+ White-Space (Nowrap))<div class="p" id="p12">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptatibus sunt ab, perferendis dignissimos doloremque tenetur maiores eaque ipsum voluptates nam incidunt voluptatem. Voluptates labore corrupti necessitatibus quidem numquam minus nemo alias rerum iusto quae omnis, fugit enim iste excepturi error qui provident voluptatibus eaque explicabo aperiam repudiandae cum eos maxime. Quidem vel ipsum sunt. Odit quis dignissimos numquam reiciendis? Natus, dolorem molestiae quam veniam odio nostrum pariatur sint impedit reiciendis modi ex cumque distinctio animi corporis quos commodi placeat magni odit. Delectus dicta molestias totam, inventore adipisci assumenda atque error ratione aspernatur veniam in suscipit alias asperiores perspiciatis repellendus!</div> <br>
+ Word-Wrap<div class="p" id="p13">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nostrum aliquid PAKISTANAFHANISTANENGLANDTURKEYCANADA non, sunt provident repellendus excepturi debitis placeat libero quisquam natus hic perferendis delectus adipisci, ea maxime vero ad architecto nulla optio a facilis alias illum! Similique, possimus magni obcaecati qui fuga nesciunt corporis ea sequi dolor repellat blanditiis illum?</div><br>
+ <br>
+ Shadow<div class="p" id="p14">Shadow</div> <br>
+ <div class="p" id="p15">Shadow</div> <br>
+ <h2>writing-mode</h2>
+   vertical-lr<div class="p" id="p16">My university name is UAF</div> <br>
+   Vertical-rl<div class="p" id="p17">My university name is UAF</div> <br>
+   <h2>Links</h2>
+   <!-- It contains 4 parts -->
+   <a href="https://www.wikipedia.com">Wikipedia</a> <br>
+   <h2>Fonts</h2>
+  Font size, weight, style<div class="p" id="p19">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque harum itaque sunt, sapiente consectetur quidem. Exercitationem, hic consequatur. Iste dolorum voluptatum aspernatur molestiae at culpa in, maxime odio perferendis facilis.</div> <br>
+  Font-Style<div class="p" id="p20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quidem reprehenderit quaerat hic facere veritatis laboriosam impedit tempore neque maiores asperiores aut consequuntur, deleniti velit delectus esse nobis, corporis ipsa!</div><br>
+  Font-vriant<div class="p" id="p21">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quas nihil, dolore nobis laudantium possimus. Similique ab, quod impedit officia nihil omnis! Asperiores eaque delectus placeat sapiente praesentium veniam laborum!</div> <br>
+  <br>
+  <h2>Box-Shadow</h2>
+   (Blur)<div class="p" id="p22">Box Shadow</div> <br> <br> <br><br>
+  <div class="p" id="p23">Box Shadow</div> <br><br>
+  <div class="p" id="p24">Not-Blur Shadow</div> <br><br>
+  <div class="p" id="p25">Inset-Shadow</div> <br><br>
+  <div class="p" id="p26">Multiple-Shadow</div><br>
+  <h1>Image Reflection</h1>
+  <!-- if you want to add special properties to image thne use class R -->
+  <div class="r">
+  Simple <img class="R" src="image.png" alt="image"> <br>
+  <img class="R" id="p27" src="image.png" alt="image"><br>
+  <img class="R" id="p28" src="image.png" alt="image"><br>
+  <img class="R" id="p29" src="image.png" alt="image"><br>
+</div>
+  <br>
+<h1>Opacity</h1>
+<div id="color-box"></div>
+<div id="Box"></div>
+Hover Tag
+<img src="image.jpg" alt="image">
+<h1>CSS Filters</h1>
+Blur<div id="blur">
+<img src="image.jpg" alt="">
+</div>
+brightness<div id="brightness"><img src="image.jpg" alt=""></div>
+BlacknWhite<div id="BnW"><img src="image.jpg" alt=""></div>
+hue-rotate<div id="hue-rotate"><img src="image.jpg" alt=""></div>
+invert<div id="invert"><img src="image.jpg" alt=""></div>
+sepia<div id="sepia"><img src="image.jpg" alt=""></div>
+Multiple filters<div id="Filters"><img src="image.jpg" alt=""></div>
+<h1>Css Gradient</h1>
+<h2>Linear-Gradient</h2>
+<!-- Mixing of two or more colors smoothly is called gradient. It has 2 types...Linear and radial -->
+<div class="G" id="p30"></div>
+<div class="G" id="p31"></div>
+<div class="G" id="p32"></div>
+<div class="G" id="p33"></div>
+<h2>Radial-Gradient</h2>
+<div class="G" id="p34"></div>
+<div class="G" id="p35"></div>
+
+</body>
+</html>
